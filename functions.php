@@ -153,12 +153,14 @@ function theme_enqueue_styles() {
   );
 
   // style.css（テーマ本体のCSS）
-  wp_enqueue_style(
-    'main-style',
-    get_stylesheet_uri(),
-    [],
-    filemtime(get_theme_file_path('style.css'))
-  );
+  // 変更後（cssフォルダ内のstyle.cssを読み込むように変更）
+wp_enqueue_style(
+  'main-style',
+  get_template_directory_uri() . '/css/style.css',
+  [],
+  filemtime(get_theme_file_path('css/style.css'))
+);
+
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 // generatorを非表示にする

@@ -9,9 +9,9 @@
           <div class="fv__slide fv__slide1"></div>
           <div class="fv__slide fv__slide2"></div>
         </div>
-        <h2 class="fv__title fade-in delay-1">BECOME A<br>
-          CHALLENGER.</h2>
-        <p class="fv__subtitle fade-in delay-2">君の挑戦が、意思が、未来を変える</p>
+        <h2 class="fv__title fade-in delay-1">Flying Together<br>
+          into the Future</h2>
+        <p class="fv__subtitle fade-in delay-2">未来への飛翔を、共に</p>
         <div class="fv__wrapper fade-in delay-3">
           <a class="fv__newsBanner" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
             <span class="fv__newsBanner--label">NEWS</span>
@@ -59,22 +59,22 @@
             </li>
           </ul>
           <h3 class="top-about__title">
-            <span>後悔しないキャリアを作る、</span>
-            <span>それこそが、我々の使命だ</span>
+            <span>中小企業の成長を、</span>
+            <span>税務・会計の面から支えます</span>
           </h3>
         </div>
         <div class="section-inner">
           <div class="top-about__text">
             <p>
-              「人手不足」<br>
-              今の日本が抱えるこの社会課題に挑み、<br>
-              企業と個人の可能性を最大限に引き出す。<br>
-              それが私達の役目。
+              「信頼」と「対話」<br>
+              中小企業が抱える課題に向き合い、<br>
+              企業と経営者の可能性を最大限に引き出す。<br>
+              それが私達の役割。
             </p>
             <p>
               単につなぐだけじゃない。<br>
               「手と手」を取り合っていけるような、<br>
-              持続可能な社会を、一緒に作りませんか？
+              持続可能な関係を、一緒に作りませんか？
             </p>
           </div>
 
@@ -90,7 +90,7 @@
             <span class="top-member__title--en title-box__en">MEMBER</span>
             <h2 class="top-member__title--ja title-box__ja"><span>人</span>を知る</h2>
           </div>
-          <p class="section-text"> TETOTEの社員がどういった信念を持って働いているのか、<br>
+          <p class="section-text"> 飛翔の職員がどういった信念を持って働いているのか、<br>
             一日のスケジュールや仕事内容などを紹介します。</p>
           <div class="swiper top-member__swiper">
             <div class="swiper-wrapper">
@@ -123,7 +123,7 @@
                           <span><?php echo esc_html($staff_msg2); ?></span>
                         </div>
                         <div class="staff-card__info">
-                          <p class="staff-card__position"><?php echo esc_html($staff_position); ?>&nbsp;&nbsp;<?php echo esc_html($staff_year); ?>年入社</p>
+                          <p class="staff-card__position"><?php echo esc_html($staff_position); ?>&nbsp;&nbsp;<?php echo esc_html($staff_year); ?></p>
                           <p class="staff-card__name"><?php echo esc_html($staff_name); ?></p>
                         </div>
                       </div>
@@ -144,7 +144,7 @@
             <span class="title-box__en">BENEFITS</span>
             <h2 class="top-benefits__title-ja title-box__ja"><span>制度・環境</span>を知る</h2>
           </div>
-          <p class="top-benefits__section-text">当社では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
+          <p class="top-benefits__section-text">当所では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
           <ul class="top-benefits__list">
             <li class="top-benefits__item">
               <a href="<?php echo esc_url(home_url('/')); ?>career/" class="top-benefits__link">
@@ -173,7 +173,7 @@
                   </div>
                 </div>
                 <p class="top-benefits__text">
-                  TETOTEの福利厚生制度は、従業員の健康と幸福を重視し、働きやすい環境を提供することを目的としています。
+                  飛翔の福利厚生制度は、従業員の健康と幸福を重視し、働きやすい環境を提供することを目的としています。
                 </p>
               </a>
             </li>

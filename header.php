@@ -17,7 +17,7 @@
           <a href="<?php echo esc_url(home_url('/')); ?>">
             <img class="header__logo-img header__logo-img--white"
               src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/tetote-logo-white.png"
-              alt="株式会社TETOTE | テクノロジーで社会課題を解決する">
+              alt="飛翔税理士事務所 | テクノロジーで社会課題を解決する">
           </a>
         </div>
         <nav class="header__nav">

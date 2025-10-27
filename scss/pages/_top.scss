@@ -40,12 +40,12 @@
 
 /* 各スライドに画像とタイミングを設定 */
 .fv__slide1 {
-  background-image: url('img/top/fv.jpg');
+  background-image: url('../img/top/fv.jpg');
   opacity: 1;
 }
 
 .fv__slide2 {
-  background-image: url('img/top/fv2.jpg');
+  background-image: url('../img/top/fv2.jpg');
   animation: bgFade 10s infinite;
   animation-delay: 2s;
 }
@@ -166,7 +166,7 @@
     transform: translateY(-50%);
     width: 10px;
     height: 10px;
-    background-image: url(img/icon/arrow7.svg);
+    background-image: url(../img/icon/arrow7.svg);
   }
 }
 
@@ -336,7 +336,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url(img/top/map.png) no-repeat center center/contain;
+  background: url(../img/top/map.png) no-repeat center center/contain;
 
   p {
     font-size: clamp(1.125rem, 0.729rem + 1.69vw, 2.25rem);
@@ -388,8 +388,8 @@
     height: 20px;
 
     /* マスクとして使用 */
-    mask: url(img/icon/big-arrow.png) no-repeat center;
-    -webkit-mask: url(img/icon/big-arrow.png) no-repeat center;
+    mask: url(../img/icon/big-arrow.png) no-repeat center;
+    -webkit-mask: url(../img/icon/big-arrow.png) no-repeat center;
     background-color: $black;
     /* 矢印の色を指定 */
   }
@@ -644,8 +644,8 @@
     transform: translate(-50%, -50%);
     width: 4.375rem;
     height: 4.375rem;
-    mask: url(img/icon/arrow-left-black.svg) no-repeat center;
-    -webkit-mask: url(img/icon/arrow-left-black.svg) no-repeat center;
+    mask: url(../img/icon/arrow-left-black.svg) no-repeat center;
+    -webkit-mask: url(../img/icon/arrow-left-black.svg) no-repeat center;
     background-color: $black;
   }
 }
@@ -663,7 +663,7 @@
 }
 
 .button-prev {
-  @include circle-btn('img/icon/arrow-right-black.svg');
+  @include circle-btn('../img/icon/arrow-right-black.svg');
   margin-left: 20px;
   background-color: $white;
   transition: transform 0.3s ease;
@@ -880,8 +880,8 @@
     transform: translate(-50%, -50%);
     width: 4.375rem;
     height: 4.375rem;
-    mask: url(img/icon/arrow.-left-white.svg) no-repeat center;
-    -webkit-mask: url(img/icon/arrow.-left-white.svg) no-repeat center;
+    mask: url(../img/icon/arrow.-left-white.svg) no-repeat center;
+    -webkit-mask: url(../img/icon/arrow.-left-white.svg) no-repeat center;
     transition: transform 0.3s ease;
     background-color: $white;
   }
@@ -1051,7 +1051,7 @@
 }
 
 .circle-btn {
-  @include circle-btn('img/icon/arrow-right-black.svg');
+  @include circle-btn('../img/icon/arrow-right-black.svg');
   transition: transform 0.3s ease;
   background-color: $white;
 
@@ -1121,7 +1121,7 @@
 
   &::before {
     content: "";
-    background: url(img/icon/books.svg) no-repeat center;
+    background: url(../img/icon/books.svg) no-repeat center;
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -1138,6 +1138,7 @@
   text-decoration: underline solid $black;
   display: -webkit-box;
   -webkit-line-clamp: 3; // 最大2行まで表示
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1275,8 +1276,8 @@
 
   &::after {
       /* マスクとして使用 */
-      mask: url(img/icon/big-arrow.png) no-repeat center;
-      -webkit-mask: url(img/icon/big-arrow.png) no-repeat center;
+      mask: url(../img/icon/big-arrow.png) no-repeat center;
+      -webkit-mask: url(../img/icon/big-arrow.png) no-repeat center;
       background-color: $black;
       /* 矢印の色を指定 */
       right: 20px;
