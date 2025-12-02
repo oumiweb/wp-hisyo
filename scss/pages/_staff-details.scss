@@ -1,4 +1,5 @@
-@use "../base/setting" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .staff-detail {
   background-color: $background-color;
@@ -112,7 +113,7 @@ span.staff-detail__highlight {
   }
 
   h2+p {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 
@@ -144,13 +145,13 @@ span.staff-detail__highlight {
     border: 1px solid $black; // 線の色
 
     @include mq(md) {
-      left: -222px;
+      display: none;
     }
   }
 }
 
 .staff-article__title:not(:first-of-type) {
-  margin-top: 23px;
+  margin-top: 50px;
 }
 
 .staff-article__toc {
@@ -169,7 +170,7 @@ span.staff-detail__highlight {
   display: block;
   padding-top: 16px;
   color: #999;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 14px;
   text-decoration: none;
 
@@ -181,7 +182,7 @@ span.staff-detail__highlight {
 .toc-list:first-child {
   font-size: 14px;
   font-weight: $bold;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #666;
 }
 

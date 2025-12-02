@@ -6,10 +6,9 @@
 
     <section class="carrer-mv">
       <div class="section__mv">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/career/carrer-fv 1.jpg" alt="オフィス風景" class="section__image">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/career/carrer-fv 1.jpg" alt="" class="section__image">
         <div class="mv__wrapper">
-          <h2 class="mv__title">CAREER</h2>
-          <p class="mv__sub-title">研修制度とキャリアパス</p>
+          <h1 class="mv__title">研修制度とキャリアパス</h1>
           <p class="mv__lead">キャリアパスを支える充実した、研修制度</p>
         </div>
       </div>
@@ -19,66 +18,60 @@
     </section>
     <section class="career">
       <div class="section-inner">
-
-        <h2 class="section-title section-title__right">キャリアパスに沿った研修制度を用意</h2>
-        <p class="section__lead">
-          弊社では、コンサルタントのキャリアパスを、大きく4つのステージに分けています。
+      <p class="career__text">
+        税理士法人では、スタッフ一人ひとりの成長を支援するために、各ステージに応じた研修制度を整備しています。
         </p>
         <div class="career__img">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/career/tetote-carrer-path.jpg" alt="TETOTEでのキャリアパスの図解">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/career/carrea1.jpg" alt="">
         </div>
-        <p class="career__text">
-          TETOTE は、コンサルタントのキャリアパスを支えるために、以下の独自の研修制度を設けています。
-        </p>
         <div class="career__list">
 
           <div class="career__item">
-            <p class="career__item-title">1. ケーススタディ研修</p>
+            <h2 class="career__item-title">1.実務基礎研修</h2>
             <p class="career__item-text">
-              TETOTE の過去のプロジェクト事例を基にしたケーススタディ研修を実施しています。<br>
-              この研修では、実際のプロジェクトで直面する課題を解決するために、分析力、問題解決能力、プレゼンテーション能力などを実践的に習得することができます。
+            入社後の初期研修では、会計ソフトの操作方法や記帳の基本、税務申告の流れなど、実務に必要な基礎知識を学びます。<br>
+            また、社内ルールやマナー研修も実施し、スムーズに業務へ移行できるようサポートします。
             </p>
           </div>
 
           <div class="career__item">
-            <p class="career__item-title">2. クライアント対応研修</p>
+            <h2 class="career__item-title">2. 顧客対応スキル研修</h2>
             <p class="career__item-text">
-              TETOTE は、クライアントとの信頼関係構築を重視しています。<br>
-              この研修では、クライアントとのコミュニケーションスキル、交渉スキル、プレゼンテーションスキルなどを習得し、クライアントの課題解決に貢献できるコンサルタントを育成します。
+            顧問先とのコミュニケーション能力向上を目的とした研修です。<br>
+            訪問時のマナー、電話・メール対応、提案資料の作成・説明スキルを習得し、信頼関係を築ける対応力を養います。
             </p>
           </div>
 
           <div class="career__item">
-            <p class="career__item-title">3. 専門知識研修</p>
+            <h2 class="career__item-title">3. 税務・会計専門研修</h2>
             <p class="career__item-text">
-              財務、会計、ITなど、コンサルタント業務に必要な専門知識を習得するための研修を実施しています。<br>
-              TETOTE は、幅広い分野の知識を持つコンサルタントを育成し、クライアントに最適なソリューションを提供できるようにしています。
+            所得税・法人税・消費税などの各税目に関する知識を深め、実務に活かすための専門研修を行います。<br>
+            最新の税制改正や事例研究も取り入れ、常に高い専門性を維持します。
             </p>
           </div>
 
           <div class="career__item">
-            <p class="career__item-title">4. マネジメント研修</p>
+            <h2 class="career__item-title">4. マネジメント研修</h2>
             <p class="career__item-text">
-              プロジェクトマネジメント、リーダーシップ、チームビルディングなど、マネジメントスキルを習得するための研修を実施しています。<br>
-              TETOTE は、将来的にマネジメント層を担うコンサルタントを育成し、組織全体の成長を促進しています。
+            チームリーダーやマネージャーとしての役割を担うために、部下指導や進捗管理、業務改善などを学ぶ研修です。<br>
+            組織全体の品質向上や人材育成を支えるリーダーを育てます。
             </p>
           </div>
 
           <div class="career__item">
-            <p class="career__item-title"><span class="career__training-number">5.</span>外部研修</p>
+            <h2 class="career__item-title"><span class="career__training-number">5.</span>外部セミナー・資格支援</h2>
             <p class="career__item-text">
-              社外で実施される研修にも積極的に参加することができます。<br>
-              TETOTE は、最新の知識やスキルを習得し、常に成長し続けるコンサルタントを育成します。
+            税理士試験の受験や、外部の専門セミナーへの参加を推奨・支援しています。<br>
+            自主的な学びを応援し、長期的なスキルアップをサポートします。
             </p>
           </div>
-
         </div>
 
       </div>
     </section>
     <section class="visual">
       <div class="visual__image">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="オフィスビルの写真">
       </div>
 
       <div class="visual__entry-box">

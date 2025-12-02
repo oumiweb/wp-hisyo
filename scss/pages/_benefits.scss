@@ -1,4 +1,5 @@
-@use "../base/setting" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 
 .benefit {
@@ -41,7 +42,7 @@
 .definition__item-desc {
   padding: 36px 0;
   border-bottom: 1px dotted $black;
-  line-height: 1.5;
+  line-height: 1.7;
 
   @include mq("md") {
     padding: 15px 0;

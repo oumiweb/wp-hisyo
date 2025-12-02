@@ -1,4 +1,5 @@
-@use "../base/setting" as*;
+@use "../base" as *;
+@use "../components" as *;
 
 @media screen and (max-width: 834px) {
   .buttons {
@@ -44,6 +45,7 @@
   transition: 0.5s;
   font-size: clamp(14px, 2vw, 16px);
   border-bottom: 1px solid #AFA86F;
+  line-height: 1.8;
 }
 
 .accordion__title + .accordion__question {
@@ -56,7 +58,7 @@
 }
 
 .accordion__question span {
-  font-family: Viga;
+  font-family: Alegreya;
   font-size: 24px;
   text-align: left;
   border-radius: 50%;

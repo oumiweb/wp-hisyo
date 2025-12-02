@@ -40,22 +40,22 @@
         <div class="slider-wrapper">
           <ul class="slider">
             <li class="slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide01.jpg" alt="男性が電話をかけている画像" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide01.jpg" alt="">
             </li>
             <li class="slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide02.jpg" alt="女性がパソコンで作業している画像" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide02.jpg" alt="">
             </li>
             <li class="slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide03.jpg" alt="女性がプレゼンしている画像" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide03.jpg" alt="">
             </li>
             <li class="slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide01.jpg" alt="男性が電話をかけている画像" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide01.jpg" alt="">
             </li>
             <li class="slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide02.jpg" alt="女性がパソコンで作業している画像" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide02.jpg" alt="">
             </li>
             <li class="slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide03.jpg" alt="女性がプレゼンしている画像" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide03.jpg" alt="">
             </li>
           </ul>
           <h3 class="top-about__title">
@@ -64,20 +64,21 @@
           </h3>
         </div>
         <div class="section-inner">
-          <div class="top-about__text">
-            <p>
-              「信頼」と「対話」<br>
-              中小企業が抱える課題に向き合い、<br>
-              企業と経営者の可能性を最大限に引き出す。<br>
-              それが私達の役割。
-            </p>
-            <p>
-              単につなぐだけじゃない。<br>
-              「手と手」を取り合っていけるような、<br>
-              持続可能な関係を、一緒に作りませんか？
-            </p>
+          <div class="top-about">
+            <div class="top-about__text">
+              <p>
+                「信頼」と「対話」<br>
+                中小企業が抱える課題に向き合い、<br>
+                企業と経営者の可能性を最大限に引き出す。<br>
+                それが私達の役割。
+              </p>
+              <p>
+                単につなぐだけじゃない。<br>
+                「手と手」を取り合っていけるような、<br>
+                持続可能な関係を、一緒に作りませんか？
+              </p>
+            </div>
           </div>
-
           <div class="top-about__vewmore">
             <a class="viewmore-btn" href="<?php echo esc_url(home_url('/')); ?>about-us/">VIEW MORE</a>
           </div>
@@ -86,10 +87,10 @@
 
       <section class="top-member">
         <div class="inner">
-          <div class="title-box">
+          <h2 class="title-box">
             <span class="top-member__title--en title-box__en">MEMBER</span>
-            <h2 class="top-member__title--ja title-box__ja"><span>人</span>を知る</h2>
-          </div>
+            <span class="top-member__title--ja title-box__ja"><span>人</span>を知る</span>
+          </h2>
           <p class="section-text"> 飛翔の職員がどういった信念を持って働いているのか、<br>
             一日のスケジュールや仕事内容などを紹介します。</p>
           <div class="swiper top-member__swiper">
@@ -107,7 +108,7 @@
               <?php if ($staff_query->have_posts()) : ?>
                 <?php while ($staff_query->have_posts()) : $staff_query->the_post(); ?>
                   <?php
-                  $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'medium'); // アイキャッチ画像
+                  $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); // アイキャッチ画像
                   $staff_name = get_field('staff_name'); // ACFフィールド：名前
                   $staff_position = get_field('staff_position'); // ACFフィールド：役職
                   $staff_year = get_field('staff_year'); // ACFフィールド：入社年
@@ -134,8 +135,16 @@
               <?php else : ?>
                 <p>スタッフ情報がまだ登録されていません。</p>
               <?php endif; ?>
-
             </div>
+            </div>
+            <div class="top-member__viewmore">
+          <a class="viewmore-btn" href="<?php echo esc_url( get_post_type_archive_link('staff') ); ?>">VIEW MORE</a>
+          <div class="top-member__arrow-btn">
+            <a class="button-prev" href=""><span class="visually-hidden">前へ</span></a>
+            <a class="button-next" href=""><span class="visually-hidden">次へ</span></a>
+          </div>
+        </div>
+        </div>
       </section>
 
       <section class="top-benefits">
@@ -149,7 +158,7 @@
             <li class="top-benefits__item">
               <a href="<?php echo esc_url(home_url('/')); ?>career/" class="top-benefits__link">
                 <div class="top-benefits__wrapper">
-                  <img class="top-benefits__image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/career.svg" alt="研修制度とキャリアパス" />
+                  <img class="top-benefits__image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/benefit1.png" width="250" height="180" alt="">
                   <span class="top-benefits__label">Traning And Career</span>
                   <h3 class="top-benefits__title">研修制度とキャリアパス</h3>
                   <div class="top-benefits__arrow">
@@ -165,7 +174,7 @@
             <li class="top-benefits__item">
               <a href="<?php echo esc_url(home_url('/')); ?>benefits/" class="top-benefits__link">
                 <div class="top-benefits__wrapper">
-                  <img class="top-benefits__image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/hukurikousei.svg" alt="">
+                  <img class="top-benefits__image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/benefit2.png" width="250" height="180" alt="">
                   <span class="top-benefits__label">Employee Benefits</span>
                   <h3 class="top-benefits__title">福利厚生</h3>
                   <div class="top-benefits__arrow">
@@ -212,9 +221,9 @@
                     <div class="card__item">
                       <div class="card__img">
                         <?php if (has_post_thumbnail()) : ?>
-                          <?php the_post_thumbnail('medium'); ?>
+                          <?php the_post_thumbnail('full'); ?>
                         <?php else : ?>
-                          <img src="<?php echo get_template_directory_uri(); ?>/img/common/no-image.jpg" alt="no image">
+                          <img src="<?php echo get_template_directory_uri(); ?>/img/common/no-image.jpg" alt="画像がありません">
                         <?php endif; ?>
                       </div>
                       <div class="card__body">
@@ -273,7 +282,7 @@
       <!-- メインビジュアル -->
       <section class="visual">
         <div class="visual__image">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="">
         </div>
 
         <div class="visual__entry-box">

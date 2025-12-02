@@ -6,11 +6,10 @@
 
     <section class="benefits">
       <div class="section__mv">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/benefits/benefits-fv.jpg" alt="カフェ風景" class="section__image">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/benefits/benefits-fv.jpg" alt="" class="section__image">
         <div class="mv__wrapper">
-          <h2 class="mv__title"><?php the_title(); ?>
-          </h2>
-          <p class="mv__sub-title">福利厚生について</p>
+          <h1 class="mv__title"><?php the_title(); ?>
+          </h1>
           <p class="mv__lead">充実した福利厚生制度を設けています。</p>
         </div>
       </div>
@@ -97,7 +96,7 @@
 
     <section class="visual">
       <div class="visual__image">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="">
       </div>
 
       <div class="visual__entry-box">

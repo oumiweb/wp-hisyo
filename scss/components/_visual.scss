@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: center;
   font-weight: $bold;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .visual__entry_button {
@@ -60,10 +60,16 @@
   margin-top: 31px;
 
   &::after {
-    mask: url(img/icon/arrow16.png) no-repeat center;
-    -webkit-mask: url(img/icon/arrow16.png) no-repeat center;
+    content:"";
+    mask: url(../img/icon/arrow6.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask: url(../img/icon/arrow6.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
     background-color: #222222;
     right: 20px;
+    transition: background-color 0.3s ease;
   }
 
   &:hover::after {

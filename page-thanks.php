@@ -26,7 +26,7 @@
 
   <section class="visual">
     <div class="visual__image">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="オフィスビルの写真">
     </div>
 
     <div class="visual__entry-box">

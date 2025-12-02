@@ -1,8 +1,8 @@
 @use '../base/setting' as *;
 
-@mixin viewmore-btn($text-color: #222222, $hover-bg-color: #222222, $padding: 10px 30px) {
+@mixin viewmore-btn($text-color: #222222, $padding: 10px 30px) {
   font-size: 1.25rem;
-  font-family: 'Viga', sans-serif;
+  font-family: 'Alegreya', serif;
   color: $text-color; /* 通常時の文字色 */
   border: 1px solid $text-color;
   transition: all 0.3s;
@@ -20,7 +20,7 @@
   }
 
   &:hover {
-    background-color: $hover-bg-color; /* ホバー時の背景色 */
+    background-color: $hover-color; /* ホバー時の背景色 */
     color: #fff; /* ホバー時の文字色を固定（白） */
   }
 }
@@ -50,8 +50,12 @@
     transform: translate(-50%, -50%);
     width: $arrow-size; /* 矢印のサイズを固定 */
     height: $arrow-size;
-    mask: url($arrow-img) no-repeat center;
-    -webkit-mask: url($arrow-img) no-repeat center;
+    mask: url($arrow-img);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask: url($arrow-img);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
     background-color: $black; /* 矢印の色も固定 */
   }
 }
@@ -68,7 +72,7 @@
   transition: background-color 0.3s ease, color 0.3s ease; // ホバー時のスムーズなアニメーション
 
   &:hover {
-    background-color: $hover-bg-color; // ホバー時の背景色
+    background-color: $hover-color; // ホバー時の背景色
     color: $hover-text-color; // ホバー時の文字色
   }
 }

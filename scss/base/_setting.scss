@@ -26,7 +26,9 @@ $black: #222222;
 $white: #ffffff;
 $default-color: #afa86f;
 $hover-color: #988c2c;
-$background-color: #FAF7F1;
+$background-color: #F0F4FA;
+$blue: #0c2d6b;
+$hover-bg-color:#faf7f1;
 
 
 // ================================================
@@ -36,17 +38,16 @@ $background-color: #FAF7F1;
 body, address {
   font-size: 16px; /* フォントサイズ */
   font-family: 
-    "Noto Sans JP",   /* 日本語用フォント */
-    "Poppins",        /* 英語や多言語用フォント */
-    "Viga",           /* 補助的なフォント */
-    sans-serif;       /* フォールバックフォント */
+    "Shippori Mincho",   /* 日本語用フォント */
+    "Alegreya",        /* 英語や多言語用フォント */
+    serif;       /* フォールバックフォント */
   font-style: normal; /* フォントスタイル */
 }
 
 // フォントウェイト
 $regular: 300;
 $normal: 400;
-$bold: 700;
+$bold: 500;
 
 
 // ================================================

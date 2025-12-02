@@ -4,7 +4,7 @@
   <div class="section__mv">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog/blog-fv.jpg" alt="オフィス風景" class="section__image">
     <div class="mv__wrapper">
-      <h2 class="mv__title">BLOG</h2>
+      <h1 class="mv__title">BLOG</h1>
       <p class="mv__sub-title">採用ブログ</p>
       <p class="mv__lead">採用情報やイベント情報などをご紹介します。</p>
     </div>
@@ -33,7 +33,7 @@
 <!-- bottomメインビジュアル -->
 <section class="visual">
   <div class="visual__image">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="オフィスビルの写真">
   </div>
 
   <div class="visual__entry-box">

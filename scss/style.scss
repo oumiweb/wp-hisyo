@@ -1,17 +1,5 @@
-@use "base/reset" as *;
-@use "base/setting" as *;
-@use "components/header" as *;
-@use "pages/top" as *;
-@use "components/visual" as *;
-@use "components/footer" as *;
-@use "pages/about-us" as *;
-@use "pages/staff" as *;
-@use "pages/staff-details" as *;
-@use "pages/blog" as *;
-@use "pages/blog-detail" as *;
-@use "pages/benefits" as *;
-@use "pages/career" as *;
-@use "pages/details" as *;
-@use "pages/faq" as *;
-@use "pages/entry" as *;
-@use "pages/entry-thanks" as *;
+@charset "UTF-8";
+
+@use "base";
+@use "components";
+@use "pages";

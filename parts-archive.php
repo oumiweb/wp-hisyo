@@ -24,7 +24,7 @@
                   </p>
 
                 <?php endif; ?>
-                <h3 class="card__title"><?php the_title(); ?></h3>
+                <h2 class="card__title"><?php the_title(); ?></h2>
                 <time datetime="<?php the_time('Y-m-d'); ?>" class="card__date"><?php the_time('Y.m.d'); ?></time>
             </div>
           </div>

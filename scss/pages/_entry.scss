@@ -1,4 +1,5 @@
-@use "../base/setting" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .margin {
   margin-top: 118px;
@@ -10,13 +11,13 @@
 }
 
 .ent-margin {
-  margin-top: 59px;
+  margin-top: 118px;
 }
 
 .entry {
   display: flex;
   padding-block: 33px 57px;
-  background-color: #FAF7F1;
+  background-color: $background-color;
   margin-bottom: 139px;
 }
 
@@ -71,7 +72,7 @@
 
   @include mq("md") {
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 1.7;
   }
 }
 
@@ -80,7 +81,7 @@
 }
 
 .entry__description {
-  line-height: 1.5;
+  line-height: 1.7;
   margin-top: 51px;
 }
 
@@ -375,7 +376,7 @@ input[type="radio"]:checked::before {
 
 .checkbox {
   .Form-Item-Label {
-    line-height: 1.5;
+    line-height: 1.7;
     margin-top: 30px;
   }
 

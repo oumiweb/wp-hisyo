@@ -1,12 +1,16 @@
-@use "../base/setting" as *;
-@use "../components/btn" as *;
+@use "../base" as *;
+@use "../components" as *;
 
+@include mq("sm"){ 
+body {
+  overflow-x: hidden;
+ }
+}
 
 .section-inner {
   width: 100%;
   max-width: 1440px;
-  padding-left: clamp(1rem, -3.974rem + 21.22vw, 15.125rem);
-  padding-right: clamp(1rem, -3.974rem + 21.22vw, 15.125rem);
+  padding-inline: clamp(1rem, -3.241rem + 18.05vw, 13rem);
   margin-right: auto;
   margin-left: auto;
 
@@ -40,12 +44,12 @@
 
 /* 各スライドに画像とタイミングを設定 */
 .fv__slide1 {
-  background-image: url('../img/top/fv.jpg');
+  background-image: url('../img/top/fv1.jpg');
   opacity: 1;
 }
 
 .fv__slide2 {
-  background-image: url('../img/top/fv2.jpg');
+  background-image: url('../img/top/fv02.jpg');
   animation: bgFade 10s infinite;
   animation-delay: 2s;
 }
@@ -79,20 +83,19 @@
 .fv__title {
   position: absolute;
   top: 34.5%;
-  font-family: Viga;
-  font-size: clamp(3rem, 1.944rem + 4.51vw, 6rem);
+  font-family: Alegreya;
+  font-size: clamp(2.25rem, 1.1rem + 5.75vw, 8rem);
   color: $white;
+  -webkit-text-stroke: 0.5px $blue;
   padding-left: 66px;
   line-height: 1.2;
-  font-weight: normal;
 }
 
 .fv__subtitle {
   position: absolute;
   bottom: 20%;
-  background-color: $black;
+  background-color: $blue;
   color: $white;
-  font-family: Viga;
   padding: clamp(9px, 1.5vw, 17px) clamp(24px, 6vw, 66px);
   font-size: clamp(12px, 4vw, 24px);
   font-weight: $bold;
@@ -121,10 +124,10 @@
 }
 
 .fv__newsBanner--label {
-  font-family: Viga;
+  font-family: Alegreya;
   font-size: 24px;
   color: $white;
-  background-color: $black;
+  background-color: $blue;
   border-radius: 50px 0 0 50px;
   padding: 16px 60px;
 
@@ -143,7 +146,7 @@
 .fv__newsBanner--text {
   padding-left: 90px;
   color: $black;
-  line-height: 1.5;
+  line-height: 1.7;
 
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
     font-size: 2rem;
@@ -152,7 +155,7 @@
 
 
 .fv__newsBanner-viewmore {
-  font-family: Viga;
+  font-family: Alegreya;
   font-size: 14px;
   color: $black;
   position: relative;
@@ -276,8 +279,8 @@
 
 
   span {
-    font-weight: $bold;
-    font-size: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
+    font-weight: 500;
+    font-size: clamp(1.25rem, 0.893rem + 1.79vw, 2.5rem);
     padding: 11px;
     background-color: $white;
     white-space: nowrap;
@@ -328,6 +331,9 @@
   }
 }
 
+.top-about {
+  margin-top: 30px;
+}
 
 .top-about__text {
   padding-top: 100px;
@@ -336,11 +342,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url(../img/top/map.png) no-repeat center center/contain;
+  background: url(../img/top/toshi.jpg) no-repeat center/cover;
 
   p {
-    font-size: clamp(1.125rem, 0.729rem + 1.69vw, 2.25rem);
-    font-weight: $bold;
+    font-size: clamp(0.875rem, 0.482rem + 1.96vw, 2.25rem);
+    font-weight: 500;
     line-height: 1.8;
     margin-left: -300%;
     transition: margin-left 0.6s ease;
@@ -371,9 +377,9 @@
 .viewmore-btn {
   padding: 29px 123px;
   font-size: 1.25rem;
-  font-family: 'Viga', sans-serif;
-  color: $black;
-  border: 1px solid $black;
+  font-family: 'Alegreya', sans-serif;
+  color: $blue;
+  border: 1px solid $blue;
   transition: all 0.3s;
   position: relative;
   white-space: nowrap;
@@ -390,12 +396,12 @@
     /* マスクとして使用 */
     mask: url(../img/icon/big-arrow.png) no-repeat center;
     -webkit-mask: url(../img/icon/big-arrow.png) no-repeat center;
-    background-color: $black;
+    background-color: $blue;
     /* 矢印の色を指定 */
   }
 
   &:hover {
-    background-color: $black;
+    background-color: $blue;
     color: $white;
 
     &::after {
@@ -449,9 +455,6 @@
     line-height: 2.5;
   }
 
-  .top-about__vewmore {
-    margin: 0;
-  }
 
   .viewmore-btn {
     padding: 23px 95px;
@@ -464,6 +467,8 @@
 
 .top-member {
   padding-top: 121px;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .inner {
@@ -493,9 +498,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(5rem, 3.768rem + 5.26vw, 8.5rem);
-  color: #9797971A;
-  font-family: 'Poppins', sans-serif;
+  color: #696bb71a;
+  font-family: 'Alegreya', serif;
   z-index: 0;
+  font-weight: $bold;
 
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
     font-size: 11rem;
@@ -508,16 +514,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(2rem, 1.56rem + 1.88vw, 3.25rem);
-  font-weight: $bold;
-
-  @media screen and (min-width: 1800px) and (max-width: 2560px) {
-    font-size: 4rem;
-  }
-
+  font-weight: 500;
 
   span {
-    text-decoration: underline solid $black;
-  }
+    text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px; /* 線の太さ */
+ }
 }
 
 .top-member__swiper {
@@ -527,7 +530,7 @@
 
 .section-text {
   padding-top: 10px;
-  line-height: 1.5;
+  line-height: 1.7;
   text-align: left;
 
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
@@ -572,7 +575,7 @@
     font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
     padding: 5px 7px;
     background-color: $default-color;
-    color: $black;
+    color: $white;
   }
 }
 
@@ -622,7 +625,6 @@
   right: 227px;
 }
 
-
 .button-next {
   content: "";
   position: relative;
@@ -644,8 +646,8 @@
     transform: translate(-50%, -50%);
     width: 4.375rem;
     height: 4.375rem;
-    mask: url(../img/icon/arrow-left-black.svg) no-repeat center;
-    -webkit-mask: url(../img/icon/arrow-left-black.svg) no-repeat center;
+    mask: url(../img/icon/arrow-right-black.svg) no-repeat center;
+    -webkit-mask: url(../img/icon/arrow-right-black.svg) no-repeat center;
     background-color: $black;
   }
 }
@@ -663,7 +665,7 @@
 }
 
 .button-prev {
-  @include circle-btn('../img/icon/arrow-right-black.svg');
+  @include circle-btn('../img/icon/arrow-left-black.svg');
   margin-left: 20px;
   background-color: $white;
   transition: transform 0.3s ease;
@@ -764,7 +766,7 @@
 .top-benefits__section-text {
   text-align: center;
   margin-top: 10px;
-  line-height: 1.5;
+  line-height: 1.7;
 
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
     font-size: 1.5rem;
@@ -776,7 +778,7 @@
   margin-top: 114px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 94px;
+  gap: clamp(2.5rem, -3.654rem + 9.62vw, 5rem);
   text-align: center;
 }
 
@@ -821,7 +823,7 @@
 }
 
 .top-benefits__label {
-  font-family: Viga;
+  font-family: Alegreya;
   font-size: clamp(0.875rem, 0.655rem + 0.94vw, 1.5rem);
   position: absolute;
   top: 28%;
@@ -850,6 +852,7 @@
   font-size: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
   padding: 5px 7px;
   background-color: $default-color;
+  color: $white;
 
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
     font-size: 2.5rem;
@@ -891,13 +894,18 @@
 .top-benefits__text {
   max-width: 430px;
   padding-top: 20px;
-  line-height: 1.5;
+  line-height: 1.7;
   text-align: left;
   align-items: center;
 
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
     max-width: 500px;
     font-size: 1.5rem;
+  }
+
+  @include mq("sm"){ 
+  max-width: 250px;
+  margin: 0 auto;
   }
 }
 
@@ -906,6 +914,7 @@
   .top-benefits__list {
     grid-template-columns: 1fr;
     text-align: center;
+    justify-content: center;
   }
 
   .top-benefits__title-ja {
@@ -923,16 +932,17 @@
     white-space: nowrap;
   }
 }
-
 @include mq("md") {
   .top-benefits {
     padding: 71px 0 78px 0;
+    align-items: center;
   }
 
   .top-benefits {
     .title-box {
       text-align: center;
       margin-left: 0;
+      overflow: hidden;
     }
 
     .title-box__ja {
@@ -1003,11 +1013,17 @@
 }
 
 
+@include mq("sm"){ 
+  .top-benefits .title-box__en {
+    left: 60%;
+ } 
+}
+
 
 // blog 採用ブログ
 .top-blog {
-  background-color: $background-color;
-  padding-top: 45px;
+  background: #e3eff7;
+  padding-block: 45px;
 }
 
 .top-blog__inner {
@@ -1045,7 +1061,7 @@
 
 .btn-text {
   border-bottom: 1px solid $black;
-  font-family: 'Viga', sans-serif;
+  font-family: 'Alegreya', sans-serif;
   margin-left: 16px;
   color: $black;
 }
@@ -1067,6 +1083,11 @@
     transform: translate(-50%, -50%) scale(1.5); // 拡大！
   }
 }
+
+
+/* ===============================================
+# ブログ
+=============================================== */
 
 .cards {
   display: grid;
@@ -1103,8 +1124,9 @@
 
 
 .card__img {
-  width: 156px;
-  height: auto;
+  display: block;
+  width: 190px;
+  height: 190px;
   flex-shrink: 0;
 
   img {
@@ -1112,7 +1134,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    aspect-ratio: calc(156 / 180);
+    
   }
 }
 
@@ -1138,7 +1160,6 @@
   text-decoration: underline solid $black;
   display: -webkit-box;
   -webkit-line-clamp: 3; // 最大2行まで表示
-  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1222,6 +1243,7 @@
 .top-recruitment {
   background-color: $background-color;
   padding: 125px 0 130px;
+  overflow-x: hidden;
 
   .section-text {
     text-align: center;
@@ -1284,7 +1306,7 @@
     }
   
     &:hover {
-      background-color: $black;
+      background-color: $blue;
       color: $white;
   
       &::after {
@@ -1341,6 +1363,10 @@
 
   .info-links__item {
     padding: 33px 131px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .info-links {

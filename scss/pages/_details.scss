@@ -1,4 +1,5 @@
-@use "../base/setting" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .details {
   padding: 145px 0 176px 0;
@@ -24,6 +25,7 @@
 }
 
 .scroll-button {
+  width: 293px;
   padding: 18px 30px 18px 57px;
   background-color: #FAF7F1;
  border-radius: 40px;
@@ -33,17 +35,12 @@
   color: $black;
   white-space: nowrap;
   transition: all 0.3s ease;
+  text-align: center;
 
   &:hover {
     opacity: 0.5;
   }
  }
-
- .scroll-button--large {
-    padding-right: 50px;
-    padding-left: 77px;
-  }
- 
 
  .details__title {
   margin-top: 97px;

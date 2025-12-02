@@ -11,7 +11,7 @@ function create_staff_post_type() {
   register_post_type('staff',
   // 投稿タイプのスラッグ
     [
-      'label' => 'STAFF', 
+      'label' => '社員について', 
       // 管理画面に表示される名前
       'public' => true,
       // サイト訪問者にも公開
@@ -62,6 +62,7 @@ function exclude_specific_breadcrumb_category($trail) {
 }
 add_filter('bcn_after_fill', 'exclude_specific_breadcrumb_category');
 
+
 // Contact Form 7で自動挿入されるPタグ、brタグを削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
@@ -100,7 +101,7 @@ function theme_enqueue_scripts() {
   // main.js（jQuery に依存させる）
   wp_enqueue_script(
     'main-js',
-    get_stylesheet_directory_uri() . '/js/main.js',
+    get_template_directory_uri() . '/js/main.js',
     array('jquery', 'swiper', 'slick-carousel'),
     '1.0.0',
     true
@@ -109,13 +110,6 @@ function theme_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 function theme_enqueue_styles() {
-  // Google Fonts のプリコネクト（通信高速化）
-  wp_enqueue_style(
-    'google-fonts-preconnect',
-    '',
-    [],
-    null
-  );
   add_action('wp_head', function () {
     echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
@@ -124,7 +118,7 @@ function theme_enqueue_styles() {
   // Google Fonts 本体
   wp_enqueue_style(
     'google-fonts',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap',
+    'https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap',
     [],
     null
   );
@@ -136,6 +130,7 @@ function theme_enqueue_styles() {
     [],
     '11.0.0'
   );
+  
 
   // Slick CSS
   wp_enqueue_style(
@@ -154,7 +149,7 @@ function theme_enqueue_styles() {
 
   // style.css（テーマ本体のCSS）
   // 変更後（cssフォルダ内のstyle.cssを読み込むように変更）
-wp_enqueue_style(
+ wp_enqueue_style(
   'main-style',
   get_template_directory_uri() . '/css/style.css',
   [],
@@ -162,7 +157,6 @@ wp_enqueue_style(
 );
 
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 // generatorを非表示にする
 remove_action('wp_head', 'wp_generator');
 // EditURIを非表示にする
@@ -207,3 +201,7 @@ function dequeue_plugins_style() {
     wp_dequeue_style('wp-block-library');
 }
 add_action( 'wp_enqueue_scripts', 'dequeue_plugins_style', 9999);
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+// これ書かないとCSSが反映されない
+// imgタグの'sizes'属性を削除
+add_filter('wp_calculate_image_sizes', '__return_false');

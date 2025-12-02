@@ -46,6 +46,7 @@
           <div class="staff-article__wrapper">
             <?php the_content(); ?>
           </div>
+          </div>
       </article>
 
       <section class="other-members">
@@ -70,7 +71,7 @@
               while ($staff_query->have_posts()) : $staff_query->the_post();
 
                 // ACFのフィールド取得
-                $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'medium'); // URL形式で登録している場合
+                $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); // URL形式で登録している場合
                 $staff_name = get_field('staff_name');
                 $staff_position = get_field('staff_position');
                 $staff_year = get_field('staff_year');
@@ -79,7 +80,7 @@
             ?>
                 <a href="<?php the_permalink(); ?>" class="staff-card__link">
                   <div class="staff-cards">
-                    <img src="<?php echo esc_url($staff_image); ?>" alt="<?php echo esc_attr($staff_name); ?>の写真" class="staff-card__image">
+                    <img src="<?php echo esc_url($staff_image); ?>" alt="" class="staff-card__image">
                     <div class="staff-card__message">
                       <span><?php echo esc_html($staff_msg1); ?></span>
                       <span><?php echo esc_html($staff_msg2); ?></span>
@@ -103,7 +104,7 @@
 
       <section class="visual">
         <div class="visual__image">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="オフィスビルの写真">
         </div>
 
         <div class="visual__entry-box">

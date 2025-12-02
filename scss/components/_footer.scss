@@ -36,7 +36,6 @@
 }
 
 .footer__logo {
-  
 img {
    width: 250px;
     height: 61px;
@@ -49,6 +48,10 @@ img {
 
 .footer__nav {
   margin-top: 27px;
+
+  @include mq("sm"){ 
+  margin-top: 60px;
+  }
 
   .footer__nav-list {
     display: flex;

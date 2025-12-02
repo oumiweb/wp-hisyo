@@ -1,4 +1,5 @@
-@use "../base/setting" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .blog-detail {
   padding: 34px 0 139px 0;
@@ -13,6 +14,10 @@
   background-color: $white;
   padding: 41px 40px 23px 40px;
   border-radius: 10px;
+
+  @include mq("sm"){ 
+    padding: 20px 16px 10px 16px;
+  }
 }
 
 .blog-detail__inner {
@@ -25,7 +30,7 @@
 
   &::before {
     content: "";
-    background: url(img/icon/books.svg) no-repeat center;
+    background: url(../img/icon/books.svg) no-repeat center;
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -38,10 +43,10 @@
 .blog-detail__title {
   margin-top: 25px;
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 1.7;
 
   @include mq("md") {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -70,10 +75,6 @@
   display: flex;
   align-items: center;
   background-color: #F0F0F0;
-
-  @include mq("md"){
-    padding-inline: 16px;
-  }
 }
 
 .pagination-link__text-group {
@@ -84,7 +85,7 @@
 
 .pagination-link__text {
   color: $black;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .pagination-link__date {
@@ -108,23 +109,39 @@
     padding: 25px 0;
   }
 
+  @include mq("sm"){ 
+  gap: 0px;
+  }
+
   &::before {
     content: "";
     display: block;
     width: 24px;
     height: 24px;
-    background: url("./img/blog/arrow02-left.png") no-repeat center/contain;
+    background: url("../img/blog/arrow02-left.png") no-repeat center/contain;
   }
  &:hover {
   opacity: 0.5;
  }
 }
 }
+
+@include mq("sm") {
+  .pagination-link__text {
+    max-width: 40vw;          // スマホでの最大幅を設定（調整可能）
+    white-space: nowrap;      // 折り返さない
+    overflow: hidden;         // はみ出しを隠す
+    text-overflow: ellipsis;  // 省略記号を表示
+  }
+}
+
+
 .blog-detail__separator {
   width: 1px;
   height: 56px; /* 棒の長さは自由に調整できる */
   background-color: $black; /* 線の色 */
   transform: rotate(0deg); /* 今回は回転させず普通の縦棒でOK */
+  padding-right: 1px;
 }
 
 
@@ -139,6 +156,7 @@
 
     @include mq("md"){
       margin-left: 10px;
+      gap: 0px;
     }
   
     &::after {
@@ -146,7 +164,7 @@
       display: block;
       width: 24px;
       height: 24px;
-      background: url("./img/blog/arrow02-right.png") no-repeat center/contain;
+      background: url("../img/blog/arrow02-right.png") no-repeat center/contain;
     }
     &:hover {
       opacity: 0.5;

@@ -1,13 +1,15 @@
-@use "../base/setting" as *;
-@use "../components/btn" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .blog-cards {
   margin: 130px 0 139px 0;
 
 .card__link .card__item {
   background-color: $background-color;
+  
  }
 }
+
 
 .wp-pagenavi {
   display: flex;

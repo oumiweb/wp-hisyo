@@ -1,9 +1,5 @@
-@use "../base/setting" as *;
-@use "../components/btn" as *;
-@use "../components/hamburger" as *;
-@use "../components/header" as *;
-@use "../components/visual" as *;
-@use "../components/footer" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .staff__inner {
   padding-inline: clamp(1rem, -3.643rem + 19.81vw, 14.188rem);

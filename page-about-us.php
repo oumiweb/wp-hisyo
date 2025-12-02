@@ -1,203 +1,234 @@
 <?php get_header(); ?>
 
-  <main>
-  <?php if(have_posts()): ?>
-  <?php while(have_posts()): the_post(); ?>
+<main>
+  <?php if (have_posts()): ?>
+    <?php while (have_posts()): the_post(); ?>
 
-    <section class="about-us">
-      <div class="section__mv">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/about-fv.jpg" alt="オフィス風景" class="section__image">
-        <div class="mv__wrapper">
-          <h2 class="mv__title"><?php the_title(); ?>
-          </h2>
-          <p class="mv__sub-title">TETOTEについて</p>
-          <p class="mv__lead">私たちの理念を紹介をします。</p>
+      <section class="about-us">
+        <div class="section__mv">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/about-fv.jpg" alt="" class="section__image">
+          <div class="mv__wrapper">
+            <h1 class="mv__title"><?php the_title(); ?>
+            </h1>
+            <p class="mv__lead">私たちの理念を紹介します。</p>
+          </div>
         </div>
-      </div>
-      <ul class="breadcrumbs">
-      <?php if(function_exists('bcn_display')) bcn_display_list(); ?>
-      </ul>
-    </section>
-    <section class="importance">
-    <h2 class="importance__title section-title">私達が大切にしていること</h2>
-      <div class="section-inner">
+        <ul class="breadcrumbs">
+          <?php if (function_exists('bcn_display')) bcn_display_list(); ?>
+        </ul>
+      </section>
+      <section class="importance">
+        <h2 class="importance__title section-title">私たちが大切にしていること</h2>
+        <div class="section-inner">
 
-        <div class="importance__card">
-          <div class="importance__wrapper">
-            <span class="importance__number"></span>
-            <h3 class="importance__heading">飽くなき探求心で、革新を創り出す</h3>
-          </div>
-          <p class="importance__text">
-            100年を超える歴史を誇りながらも、常に挑戦し続ける気概を忘れずに、未来を切り開くソリューションを提供し続けます。
-            変化を恐れず、最新技術やトレンドを積極的に研究し、お客様のニーズを超える価値を生み出すことに情熱を燃やしています。
-          </p>
-        </div>
-        <div class="importance__card">
-          <div class="importance__wrapper">
-            <span class="importance__number"></span>
-            <h3 class="importance__heading">デジタル技術の力で、未来を加速させる</h3>
-          </div>
-          <p class="importance__text">
-            ITコンサルタント会社として、業務効率化やイノベーション創出に貢献するために、デジタル技術を活用した最適なソリューションを提案します。自動化、データ分析、AIなどの技術を駆使し、お客様のビジネスを革新し、未来への飛躍を力強くサポートします。
-          </p>
-        </div>
-        <div class="importance__card">
-          <div class="importance__wrapper">
-            <span class="importance__number"></span>
-            <h3 class="importance__heading">人材こそが、未来への鍵</h3>
-          </div>
-          <p class="importance__text">
-            従業員一人ひとりが、高い専門性と人間性を兼ね備えた人材であることが、お客様への最高のサービスにつながると確信しています。個々の能力やキャリア目標に合わせた育成プログラムや、多様な経験を積む機会を提供することで、成長を支援します。
-          </p>
-        </div>
-
-        <div class="importance__card">
-          <div class="importance__wrapper">
-            <span class="importance__number"></span>
-            <h3 class="importance__heading">未経験者も歓迎！情熱と意欲があれば、誰でも活躍できる</h3>
-          </div>
-          <p class="importance__text">
-            IT業界未経験の方でも、熱意と向上心があれば、当社で活躍できるチャンスがあります。研修やOJTを通じて、必要な知識やスキルを丁寧に習得し、即戦力となる人材へと育成します。先輩社員によるサポート体制も充実しているので、安心してスキルアップを目指せます。
-          </p>
-
-        </div>
-        <div class="importance__card">
-          <div class="importance__wrapper">
-            <span class="importance__number"></span>
-            <h3 class="importance__heading">働きがいと充実感あふれる環境</h3>
-          </div>
-          <p class="importance__text">
-            ワークライフバランスを重視し、従業員が働きがいと充実感を感じられる環境づくりに積極的に取り組んでいます。充実した福利厚生制度や、多様な働き方を可能にする制度を導入し、個々のライフスタイルに合わせた働き方を支援します。
-          </p>
-
-        </div>
-      </div>
-    </section>
-    <section class="message">
-      <h2 class="message__title section-title">代表メッセージ</h2>
-      <div class="about-us__inner">
-        <div class="message__content">
-          <div class="message__image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/ceo.png" alt="代表の写真">
+          <div class="importance__card">
+            <div class="importance__wrapper">
+              <span class="importance__number"></span>
+              <h3 class="importance__heading">信頼に基づく、誠実なサポート</h3>
+            </div>
+            <p class="importance__text">
+              税務・会計の専門家として、お客様との信頼関係を何よりも大切にしています。
+              数字の裏にある想いを丁寧にくみ取り、誠実で透明性のある対応を心がけ、
+              長期的に寄り添う“経営のパートナー”を目指します。
+            </p>
           </div>
 
-          <div class="message__textarea">
-            <div class="message__lead-wrapper">
-              <h3 class="message__lead">
-                あなたがやりたいこと<br>
-                それを全力でサポートできる、<br>
-                それがTETOTEの強みです。
-              </h3>
+          <div class="importance__card">
+            <div class="importance__wrapper">
+              <span class="importance__number"></span>
+              <h3 class="importance__heading">地域と共に歩む、身近な専門家であること</h3>
+            </div>
+            <p class="importance__text">
+              地元企業や個人事業主の皆さまに寄り添い、地域経済の発展に貢献します。
+              税務相談から経営支援まで、身近な存在として「いつでも相談できる安心感」をお届けします。
+            </p>
+          </div>
+
+          <div class="importance__card">
+            <div class="importance__wrapper">
+              <span class="importance__number"></span>
+              <h3 class="importance__heading">変化に対応し、最適な提案を</h3>
+            </div>
+            <p class="importance__text">
+              税制や会計基準は常に変化しています。
+              私たちは最新の法改正・ITツールを積極的に活用し、
+              クライアントの課題に合わせた最適な解決策を提案いたします。
+            </p>
+          </div>
+
+          <div class="importance__card">
+            <div class="importance__wrapper">
+              <span class="importance__number"></span>
+              <h3 class="importance__heading">共に成長するパートナーとして</h3>
+            </div>
+            <p class="importance__text">
+              経営者の夢や目標に寄り添い、成長を共に喜べる存在でありたいと考えています。
+              税務の枠を超えて、経営計画や資金繰りなど、未来を見据えた支援にも力を入れています。
+            </p>
+          </div>
+
+          <div class="importance__card">
+            <div class="importance__wrapper">
+              <span class="importance__number"></span>
+              <h3 class="importance__heading">働く人の成長が、事務所の力に</h3>
+            </div>
+            <p class="importance__text">
+              スタッフ一人ひとりが専門性を磨き、やりがいを感じながら働ける環境を大切にしています。
+              学び続ける姿勢を応援し、チーム全体でより良いサービスを追求していきます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="message">
+        <h2 class="message__title section-title">代表メッセージ</h2>
+        <div class="about-us__inner">
+          <div class="message__content">
+            <div class="message__image">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/ceo.png" alt="代表の写真">
             </div>
 
-            <div class="message__body">
-              <p>
-                TETOTEは、ITコンサルティングとコンサル導入企業への営業を専門とする会社です。設立以来、私たちは「お客様の課題解決に真摯に取り組み、共に成長する」という理念を掲げ、お客様とパートナーと共に歩んできました。
-              </p><br>
-              <p>お客様のニーズを深く理解し、最適なソリューションを提供することで、数多くの課題解決を支援してきました。その結果、お客様との深い信頼関係を築き、共に成長することができています。</p><br>
-              <p>TETOTEは、個々の能力や個性を尊重し、多様な人材が活躍できる環境づくりに力を入れています。年齢、性別、国籍、経験などに関係なく、意欲と向上心のある人材を歓迎します。</p>
-              <br>
-              <p>私たちと共に、未来を創造していきましょう。</p>
+            <div class="message__textarea">
+              <div class="message__lead-wrapper">
+                <h3 class="message__lead">
+                  あなたの「挑戦」と「想い」に寄り添い、<br>
+                  共に未来を築くこと。<br>
+                  それが飛翔税理士事務所の使命です。
+                </h3>
+              </div>
+
+              <div class="message__body">
+                <p>
+                  飛翔税理士事務所は、企業や個人の皆さまに寄り添い、<br>
+                  税務・会計・経営のあらゆる課題解決をサポートする事務所です。<br>
+                  「信頼と誠実」を軸に、地域社会と共に歩むパートナーであり続けることを目指しています。
+                </p><br>
+
+                <p>
+                  ただ数字を扱うのではなく、<br>
+                  その先にあるお客様の想いや目標を大切にし、<br>
+                  経営の安定と発展に貢献するための最適なご提案を行っています。<br>
+                  長年の経験と専門知識をもとに、安心と信頼をお届けします。
+                </p><br>
+
+                <p>
+                  私たちは、一人ひとりの努力と成長が<br>
+                  お客様へのより良いサービスにつながると考えています。<br>
+                  スタッフ全員が学び続け、誠実な姿勢で業務に取り組むことで、<br>
+                  地域に貢献できる税理士事務所を目指しています。
+                </p>
+              </div>
+
+
+              <p class="message__name">
+              橘　大輔</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="business">
+        <div class="about-us__inner">
+          <h2 class="business__title">業務内容</h2>
+          <p class="business__lead">
+          飛翔税理士事務所では、法人・個人のお客様の幅広いニーズにお応えするために、<br>
+          税務・会計を中心とした多様なサポートを行っています。
+          </p>
+          <div class="business__card">
+            <div class="business__image">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/consulting 1.png" alt="女性社員が微笑む写真">
             </div>
 
-            <p class="message__name"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/ceo-name.svg" alt="田中浩二郎"></p>
+            <div class="business__text">
+              <hgroup>
+              <h3 class="business__category">税務顧問業務</h3>
+              <p class="business__heading">経営の安心を支える、信頼のパートナー</p>
+              </hgroup>
+              <p class="business__description">
+              月次巡回監査や決算申告、節税対策などを通じて、お客様の経営状況を的確に把握し、安心して事業に専念できる環境を整えます。<br>
+          税務だけでなく、経営全体のサポートを行う“伴走型”の顧問サービスです。
+              </p>
+            </div>
+          </div>
+          <div class="business__card">
+            <div class="business__image">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/solution-sales 1.jpg" alt="男性社員がPC触っている写真">
+            </div>
+
+            <div class="business__text">
+              <hgroup>
+              <h3 class="business__category">創業・開業支援業務</h3>
+              <p class="business__heading">夢のスタートを、確かな知識でサポート</p>
+              </hgroup>
+              <p class="business__description">
+              会社設立・開業に必要な手続きや、資金計画・事業計画の作成支援まで、経営者の第一歩をトータルにサポートします。<br>
+          税理士としての視点から、安定した経営基盤づくりをお手伝いします。
+              </p>
+            </div>
+          </div>
+          <div class="business__card">
+            <div class="business__image">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/desiner 1.jpg" alt="女性社員がPCでデザインをしている写真">
+            </div>
+
+            <div class="business__text">
+              <hgroup>
+              <h3 class="business__category">相続・事業承継支援</h3>
+              <p class="business__heading">大切な想いと資産を、次世代へつなぐ</p>
+              </hgroup>
+              <p class="business__description">
+              相続税申告から生前対策、事業承継の設計まで、<br>
+          ご家族や企業の将来を見据えた最適なプランをご提案。円満な相続・承継の実現を全力でサポートいたします。
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="business">
-      <div class="about-us__inner">
-        <h2 class="business__title">事業紹介</h2>
-        <p class="business__lead">
-          TETOTEの主力事業である「コンサルティング」以外に、新規に取り組んでいる事業をいくつか<br>紹介させていただきます。
-        </p>
-        <div class="business__card">
-          <div class="business__image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/consulting 1.png" alt="女性社員が微笑む写真">
-          </div>
-
-          <div class="business__text">
-            <p class="business__category">コンサルティング事業</p>
-            <h3 class="business__heading">お客様と伴走し、売上に直接貢献できる</h3>
-            <p class="business__description">
-              営業との連携で、人と組織の成長・変革に向けた計画立案・サービス実施、さらにフォローまで。コンサルタントとして一気通貫で携わります。
-            </p>
-          </div>
+      </section>
+      <section class="company" id="company">
+        <div class="section-inner">
+          <h2 class="company__title">会社概要</h2>
+          <dl class="company__list">
+            <dt class="company__term">会社名</dt>
+            <dd class="company__desc">飛翔税理士事務所</dd>
+            <dt class="company__term">所在地</dt>
+            <dd class="company__desc">〒000-0000<br class="sp-only">沖縄県那覇市〇〇1-1-1</dd>
+            <dt class="company__term">代表者名</dt>
+            <dd class="company__desc">橘　大輔（代表税理士）</dd>
+            <dt class="company__term">事業内容</dt>
+            <dd class="company__desc">
+              ・法人・個人の税務顧問<br>
+              ・決算・申告書類の作成<br>
+              ・創業・開業支援コンサルティング<br>
+              ・相続、事業継承に関する相談
+            </dd>
+            <dt class="company__term">電話番号</dt>
+            <dd class="company__desc">098-123-4567</dd>
+            <dt class="company__term">ウェブサイトURL</dt>
+            <dd class="company__desc"><a href="" target="_blank"
+                rel="noopener noreferrer">https://hisyo.xx.jp</a></dd>
+            <dt class="company__term">メールアドレス</dt>
+            <dd class="company__desc"><a href="">hisyo@xxx.xx.jp</a></dd>
+            <dt class="company__term">設立年月</dt>
+            <dd class="company__desc">1993年4月1日</dd>
+          </dl>
         </div>
-        <div class="business__card">
-          <div class="business__image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/solution-sales 1.jpg" alt="男性社員がPC触っている写真">
-          </div>
-
-          <div class="business__text">
-            <p class="business__category">ソリューション営業事業</p>
-            <h3 class="business__heading">お客様の課題を見つけ出し、必要な施策を
-              提案する</h3>
-            <p class="business__description">
-              お客様が抱える課題へ、ヒアリングベースで提案型営業を行い、コンサルタントとの連携で課題解決を目指します。
-            </p>
-          </div>
+      </section>
+      <section class="visual">
+        <div class="visual__image">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="">
         </div>
-        <div class="business__card">
-          <div class="business__image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/desiner 1.jpg" alt="女性社員がPCでデザインをしている写真">
-          </div>
 
-          <div class="business__text">
-            <p class="business__category">業務系システム開発事業</p>
-            <h3 class="business__heading">お客様の課題解決を強力にサポートする
-              システムを設計する</h3>
-            <p class="business__description">
-              基本設計書に従って開発とテストを実施し、本番稼働をサポート。企画から運用までの全工程を通じて包括的なアプローチで、安定した運用と迅速な対応を保証します。
-            </p>
-          </div>
+        <div class="visual__entry-box">
+          <p class="visual__text">
+            わたしたちと一緒に働く仲間を募集中です。<br>
+            少数精鋭のチームで、<br>
+            あなたも会社と一緒に成長していきましょう。
+          </p>
+          <a href="<?php echo esc_url(home_url('/')); ?>entry/" class="visual__entry_button">ENTRY</a>
         </div>
-      </div>
-    </section>
-    <section class="company" id="company">
-      <div class="section-inner">
-        <h2 class="company__title">会社概要</h2>
-        <dl class="company__list">
-          <dt class="company__term">会社名</dt>
-          <dd class="company__desc">TETOTE株式会社</dd>
-          <dt class="company__term">所在地</dt>
-          <dd class="company__desc">〒100-0001<br class="sp-only">東京都千代田区千代田1-1-1</dd>
-          <dt class="company__term">代表者名</dt>
-          <dd class="company__desc">田中浩二郎（代表取締役）</dd>
-          <dt class="company__term">事業内容</dt>
-          <dd class="company__desc">
-            ・コンサルティング<br>
-            ・コンサル導入企業への営業
-          </dd>
-          <dt class="company__term">電話番号</dt>
-          <dd class="company__desc">03-1234-5678</dd>
-          <dt class="company__term">ウェブサイトURL</dt>
-          <dd class="company__desc"><a href="https://tetote.co.jp" target="_blank"
-              rel="noopener noreferrer">https://tetote.co.jp</a></dd>
-          <dt class="company__term">メールアドレス</dt>
-          <dd class="company__desc"><a href="mailto:tetote@tetote.co.jp">tetote@tetote.co.jp</a></dd>
-          <dt class="company__term">設立年月</dt>
-          <dd class="company__desc">1993年4月1日</dd>
-        </dl>
-      </div>
-    </section>
-    <section class="visual">
-      <div class="visual__image">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
-      </div>
-
-      <div class="visual__entry-box">
-        <p class="visual__text">
-          わたしたちと一緒に働く仲間を募集中です。<br>
-          少数精鋭のチームで、<br>
-          あなたも会社と一緒に成長していきましょう。
-        </p>
-        <a href="<?php echo esc_url(home_url('/')); ?>entry/" class="visual__entry_button">ENTRY</a>
-      </div>
-    </section>
+      </section>
     <?php endwhile; ?>
-    <?php endif; ?>
-    </main>
+  <?php endif; ?>
+</main>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

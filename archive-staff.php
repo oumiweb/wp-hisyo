@@ -2,11 +2,9 @@
 
 <main>
   <div class="section__mv">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/staff-fv 1.jpg" alt="オフィス風景" class="section__image">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/staff-fv 1.jpg" alt="" class="section__image">
     <div class="mv__wrapper">
-      <h2 class="mv__title">STAFF
-      </h2>
-      <p class="mv__sub-title">社員について</p>
+      <h1 class="mv__title">社員について</h1>
       <p class="mv__lead">弊社社員のリアルな声を紹介しています。</p>
     </div>
   </div>
@@ -31,7 +29,7 @@
           <?php while ($staff_query->have_posts()): $staff_query->the_post(); ?>
 
             <?php
-            $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+            $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
             $staff_name = get_field('staff_name');
             $staff_position = get_field('staff_position');
             $staff_year = get_field('staff_year');
@@ -40,7 +38,7 @@
             ?>
             <a href="<?php the_permalink(); ?>" class="staff-card__link">
               <div class="staff-cards">
-                <img src="<?php echo esc_url($staff_image); ?>" alt="<?php echo esc_attr($staff_name); ?>の写真" class="staff-card__image">
+                <img src="<?php echo esc_url($staff_image); ?>" alt="" class="staff-card__image">
                 <div class="staff-card__message">
                   <span><?php echo esc_html($staff_msg1); ?></span>
                   <span><?php echo esc_html($staff_msg2); ?></span>
@@ -61,7 +59,7 @@
   </section>
   <section class="visual">
     <div class="visual__image">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual.jpg" alt="オフィスビルの写真">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cta/cta-visual1.jpg" alt="">
     </div>
 
     <div class="visual__entry-box">

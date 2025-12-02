@@ -1,9 +1,5 @@
-@use "../base/setting" as *;
-@use "../components/btn" as *;
-@use "../components/hamburger" as *;
-@use "../components/header" as *;
-@use "../components/visual" as *;
-@use "../components/footer" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .js-lower-page {
   .header--black {
@@ -56,7 +52,6 @@
 }
 
 .mv__title {
-  font-family: Viga;
   font-size: clamp(2rem, 1.429rem + 2.86vw, 4rem);
   font-weight: normal;
 
@@ -103,12 +98,12 @@
 
 // パンくずリスト
 .breadcrumbs {
+  max-width: 100%;
   padding: 20px;
   display: flex;
   background-color: #F0F0F0;
   padding-left: clamp(1rem, -4rem + 20vw, 20rem);
-  white-space: nowrap;
-  line-height: 1.2;
+  line-height: 1.7;
 @include mq(md) {
   flex-wrap: wrap;
 }
@@ -199,7 +194,7 @@
 .importance__heading {
   margin-left: 14px;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.7;
 
   @include mq("md") {
     font-size: 18px;
@@ -209,7 +204,7 @@
 
 .importance__text {
   margin-top: 21px;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 16px;
 
 }
@@ -293,7 +288,7 @@ img {
 .message__lead {
   font-size:clamp(1.125rem, 0.817rem + 1.31vw, 2rem);
   font-weight: $bold;
-  line-height: 1.5;
+  line-height: 1.7;
   white-space: nowrap;
 
   @media screen and (min-width: 1620px) and (max-width: 2560px) {
@@ -308,6 +303,8 @@ img {
 }
 
 .message__name {
+  font-size:  20px;
+  font-weight: $bold;
   margin-top: 21px;
   margin-left: 17px;
 }
@@ -329,7 +326,7 @@ img {
 
 .business__lead {
   margin-top: 45px;
-  line-height: 1.5;
+  line-height: 1.7;
 
 }
 
@@ -398,7 +395,7 @@ img {
   margin-top: 35px;
   font-size: 24px;
   font-weight: $bold;
-  line-height: 1.5;
+  line-height: 1.7;
 
   @include mq("md") {
     font-size: 20px;
@@ -407,7 +404,7 @@ img {
 
 .business__description {
   margin-top: 35px;
-  line-height: 1.5;
+  line-height: 1.7;
   max-width: 430px;
 }
 
@@ -460,11 +457,11 @@ img {
   padding: 36px 0;
  border-bottom: 1px dashed $black;
  margin-left: 70px;
- line-height: 1.5;
+ line-height: 1.7;
 
  @include mq("md") {
   margin-left: 0;
-  line-height: 1.5;
+  line-height: 1.7;
   padding: 10px 0;
  }
 a {
@@ -472,5 +469,5 @@ a {
  }
 }
 .company__item:nth-of-type(4) .company__desc {
-  line-height: 1.5;
+  line-height: 1.7;
 }

@@ -28,17 +28,6 @@ body.is-drawerActive .hamburger {
   position: fixed;
 }
 
-// @include mq("md") {
-//   position: absolute;
-//  }
-// }
-
-// @include mq("md") {
-// .header--black .hamburger {
-//   display: none;
-//  }
-// }
-
 .hamburger__line {
   position: absolute;
   top: 0;
@@ -48,7 +37,7 @@ body.is-drawerActive .hamburger {
   margin: auto;
   width: 52px;
   height: 2px;
-  background-color: $white;
+  background-color: #0c2d6b;
   -webkit-transition: inherit;
           transition: inherit;
   &::before,
@@ -84,9 +73,9 @@ body.is-drawerActive .hamburger {
   position: absolute;
   top: 53px;
   left: 9px;
-  color: $white;
+  color: #0c2d6b;
   font-size: 12px;
-  font-family: Viga;
+  font-family: Alegreya;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -100,7 +89,7 @@ body.is-drawerActive .hamburger {
   &::before,
   &::after {
   top: 0;
-  background-color: $black;
+  background-color: #0c2d6b;
 }
 }
 .hamburger[aria-expanded="true"] .hamburger__line::before {
@@ -298,12 +287,11 @@ body.is-drawerActive .hamburger {
     }
   }
 
-  &__en {
+  &__ja {
     font-size: clamp(1.125rem, 1.324rem + 0.75vw, 2rem);
-    font-family: Viga;
   }
 
-  &__ja {
+  &__en {
     margin-top: 11px;
     font-weight: $bold;
     font-size: clamp(0.75rem, 0.662rem + 0.38vw, 1rem);
@@ -350,6 +338,7 @@ body.is-drawerActive .hamburger {
 
     @include mq("md") {
       margin-top: 13px;
+      width: 100%;
     }
 
     @media screen and (min-width: 1500px) and (max-width: 2500px) {
@@ -370,6 +359,8 @@ body.is-drawerActive .hamburger {
 
  @include mq("md") {
     margin-left: 0;
+    width: 100%;
+    text-align: center;
  }
 }
 }

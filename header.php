@@ -13,13 +13,13 @@
     <?php if (is_front_page()) : ?>
       <div class="header--white">
         <!-- トップページ用ロゴ・ナビ -->
-        <div>
+        <h1>
           <a href="<?php echo esc_url(home_url('/')); ?>">
             <img class="header__logo-img header__logo-img--white"
-              src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/tetote-logo-white.png"
-              alt="飛翔税理士事務所 | テクノロジーで社会課題を解決する">
+              src="<?php echo get_template_directory_uri(); ?>/img/logo/hisyo-logo2.png"
+              alt="飛翔税理士事務所 | 経営に安心と未来を">
           </a>
-        </div>
+        </h1>
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="<?php echo esc_url(home_url('/details/')); ?>" class="recruitment_btn">募集要項</a></li>
@@ -38,8 +38,8 @@
         <div>
           <a href="<?php echo esc_url(home_url('/')); ?>">
             <img class="header__logo-img header__logo-img--black"
-              src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/tetote-logo-black.png"
-              alt="株式会社TETOTE | テクノロジーで社会課題を解決する">
+              src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/hisyo-logo.png"
+              alt="飛翔税理士事務所 | 経営に安心と未来を。">
           </a>
         </div>
         <nav class="header__nav">
@@ -58,7 +58,7 @@
 
     <div class="header--black">
       <div><a href="<?php echo esc_url(home_url('/')); ?>"><img class="header__logo-img header__logo-img--black"
-            src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/tetote-logo-black.png" alt="株式会社TETOTE | テクノロジーで社会課題を解決する"></a>
+            src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/hisyo-logo.png" alt="飛翔税理士事務所 | 経営に安心と未来を。"></a>
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
@@ -66,16 +66,16 @@
           <li class="header__nav-item"><a href="<?php echo esc_url(home_url('/')); ?>entry/" class="entry_btn">ENTRY</a></li>
         </ul>
       </nav>
-      <button type="button" class="button hamburger js-hamburger" aria-controls="js-glabal-menu"
+      <button type="button" class="button hamburger js-hamburger" aria-controls="js-global-menu"
         aria-expanded="false" aria-label="メニューを開閉する">
         <span class="hamburger__line"></span>
         <span class="hamburger__label">MENU</span>
       </button>
     </div>
     <div class="sp-global-menu" id="js-global-menu" aria-hidden="true">
-      <header class="header--sp">
+      <div class="header--sp">
         <div><a href="<?php echo esc_url(home_url('/')); ?>"><img class="header__logo-img header__logo-img--black"
-              src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/tetote-logo-black.png" alt="株式会社TETOTE | テクノロジーで社会課題を解決する"></a>
+              src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/hisyo-logo.png" alt="飛翔税理士事務所 | 経営に安心と未来を。"></a>
         </div>
         <nav class="header__nav">
           <ul class="header__nav-list">
@@ -88,12 +88,12 @@
           <span class="hamburger__line"></span>
           <span class="hamburger__label">MENU</span>
         </button>
-      </header>
+      </div>
       <section class="recruit-links">
         <div class="recruit-links__inner">
 
           <div class="recruit-links__logo-area">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/tetote-logo-black.png" alt="TETOTEロゴ" class="recruit-links__logo" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/hisyo-logo.png" alt="飛翔税理士事務所" class="recruit-links__logo" />
           </div>
 
           <div class="recruit-links__content">
@@ -102,40 +102,40 @@
               <ul class="recruit-links__list">
                 <li class="recruit-links__item">
                   <a href="<?php echo esc_url(home_url('/')); ?>about-us/">
+                    <p class="recruit-links__ja">当事務所について</p>
                     <p class="recruit-links__en">ABOUT US</p>
-                    <p class="recruit-links__ja">TETOTEについて</p>
                   </a>
                 </li>
                 <li class="recruit-links__item">
                   <a href="<?php echo esc_url(home_url('/')); ?>staff/">
+                    <p class="recruit-links__ja">所員について</p>
                     <p class="recruit-links__en">STAFF</p>
-                    <p class="recruit-links__ja">社員について</p>
                   </a>
                 </li>
                 <li class="recruit-links__item">
                   <a href="<?php echo esc_url(home_url('/')); ?>blog/">
-                    <p class="recruit-links__en">BLOG</p>
                     <p class="recruit-links__ja">採用ブログ</p>
+                    <p class="recruit-links__en">BLOG</p>
                   </a>
                 </li>
               </ul>
               <ul class="recruit-links__list">
                 <li class="recruit-links__item">
                   <a href="<?php echo esc_url(home_url('/')); ?>benefits/">
-                    <p class="recruit-links__en">BENEFITS</p>
                     <p class="recruit-links__ja">福利厚生について</p>
+                    <p class="recruit-links__en">BENEFITS</p>
                   </a>
                 </li>
                 <li class="recruit-links__item">
                   <a href="<?php echo esc_url(home_url('/')); ?>career/">
+                    <p class="recruit-links__ja">キャリアパス</p>
                     <p class="recruit-links__en">CARRER</p>
-                    <p class="recruit-links__ja">研修制度とキャリアパス</p>
                   </a>
                 </li>
                 <li class="recruit-links__item">
                   <a href="<?php echo esc_url(home_url('/')); ?>faq/">
-                    <p class="recruit-links__en">FAQ</p>
                     <p class="recruit-links__ja">よくある質問</p>
+                    <p class="recruit-links__en">FAQ</p>
                   </a>
                 </li>
               </ul>

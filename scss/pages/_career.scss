@@ -1,4 +1,5 @@
-@use "../base/setting" as *;
+@use "../base" as *;
+@use "../components" as *;
 
 .career {
   padding: 145px 0 176px 0;
@@ -8,6 +9,7 @@
   }
 
 }
+
 .career__title {
   font-size: 32px;
   font-weight: $bold;
@@ -24,7 +26,7 @@
 
 .section__lead {
   margin-top: 113px;
-  line-height: 1.5;
+  line-height: 1.7;
 
   @include mq("md") {
     margin-top: 50px;
@@ -34,11 +36,16 @@
 
 .career__text {
   margin-top: 37px;
-  line-height: 1.5;
+  line-height: 1.7;
+  font-size:  24px;
+
+  @include mq("md"){ 
+  font-size: 18px;
+  }
 }
 
 .career__list {
-  margin-top: 89px;
+  margin-top: 40px;
 }
 
 .career__item {
@@ -52,6 +59,11 @@
   padding: 12px 21px;
   background-color: $default-color;
   border-radius: 10px;
+  color: $white;
+
+  @include mq("md") {
+    font-size: 16px;
+  }
 }
 
 .career__item-text {
@@ -59,5 +71,3 @@
   line-height: 1.8;
 
 }
-
-
