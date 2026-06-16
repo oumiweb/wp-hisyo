@@ -1,0 +1,9 @@
+@use "../base" as *;
+
+.section-inner {
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: clamp(1rem, -3.241rem + 18.05vw, 13rem);
+  margin-right: auto;
+  margin-left: auto;
+}

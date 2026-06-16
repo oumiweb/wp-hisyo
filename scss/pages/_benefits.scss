@@ -1,11 +1,14 @@
 @use "../base" as *;
 @use "../components" as *;
 
-
 .benefit {
   padding-top: 145px;
 
-  .section-title__right {
+  @include mq("md") {
+    padding-top: 50px;
+  }
+
+  &__title {
     font-size: 32px;
 
     @include mq("md") {
@@ -13,99 +16,84 @@
     }
   }
 
-  @include mq("md") {
-    padding-top: 50px;
+  &__list {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    row-gap: 0;
+    padding-top: 113px;
+
+    @include mq("md") {
+      padding-top: 50px;
+      grid-template-columns: 100px 1fr;
+    }
   }
 
-}
+  &__term {
+    font-weight: $bold;
+  }
 
-.section-title__right {
-  display: block
-}
+  &__term,
+  &__desc {
+    padding: 36px 0;
+    border-bottom: 1px dotted $black;
+    line-height: 1.7;
 
-.definition__list {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  row-gap: 0;
-  padding-top: 113px;
-
-  @include mq("md") {
-    padding-top: 50px;
-    grid-template-columns: 100px 1fr;
+    @include mq("md") {
+      padding: 15px 0;
+    }
   }
 }
-.definition__item-title {
-  font-weight: $bold;
-}
 
-.definition__item-title,
-.definition__item-desc {
-  padding: 36px 0;
-  border-bottom: 1px dotted $black;
-  line-height: 1.7;
-
-  @include mq("md") {
-    padding: 15px 0;
-  }
-}
- 
-
-// 利用者の声
-.voice {
+.benefit-voice {
   padding: 128px 0 139px 0;
 
   @include mq("md") {
     padding: 100px 0;
   }
-}
 
-.voice__title {
-  font-size: 32px;
-  font-weight: $bold;
+  &__title {
+    font-size: 32px;
+    font-weight: $bold;
 
-  @include mq("md") {
-    font-size: 24px;
+    @include mq("md") {
+      font-size: 24px;
+    }
   }
-}
 
-.voice__list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 46px;
-
-  @include mq("md") {
+  &__list {
     display: flex;
-    flex-direction: column;
-  }
-}
-.voice__year {
-  padding-top: 23px;
-  color: $hover-color;
-}
+    align-items: center;
+    justify-content: space-between;
+    gap: 46px;
 
-.voice__name {
-  font-size: 24px;
-  font-weight: $bold;
-  padding-top: 13px;
-
-}
-.voice__text {
-  padding-top: 25px;
-  line-height: 1.8;
-  max-width: 467px;
-
-}
-
-.voice__img {
-  margin-top: 36px;
-  aspect-ratio: calc(980 / 560);
-
-  img {
-    width: 100%;
+    @include mq("md") {
+      flex-direction: column;
+    }
   }
 
+  &__year {
+    padding-top: 23px;
+    color: $hover-color;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: $bold;
+    padding-top: 13px;
+  }
+
+  &__text {
+    padding-top: 25px;
+    line-height: 1.8;
+    max-width: 467px;
+  }
+
+  &__img {
+    margin-top: 36px;
+    aspect-ratio: calc(980 / 560);
+
+    img {
+      width: 100%;
+    }
+  }
 }
-
-
-

@@ -117,7 +117,7 @@
       const scrollTop = $(window).scrollTop();
       const windowHeight = $(window).height();
 
-      $('.top-about__text').each(function () {
+      $('.js-aboutText').each(function () {
         const offsetTop = $(this).offset().top;
         const inView = scrollTop > offsetTop - windowHeight + 100 && scrollTop < offsetTop + $(this).outerHeight();
         $(this).toggleClass('active', inView);

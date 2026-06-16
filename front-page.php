@@ -37,7 +37,7 @@
 
 
       <section class="top-about">
-        <div class="slider-wrapper">
+        <div class="slider-wrapper top-about__slider">
           <ul class="slider">
             <li class="slide">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/top/top-slide01.jpg" alt="">
@@ -64,8 +64,8 @@
           </h3>
         </div>
         <div class="section-inner">
-          <div class="top-about">
-            <div class="top-about__text">
+          <div class="top-about__body">
+            <div class="top-about__text js-aboutText">
               <p>
                 「信頼」と「対話」<br>
                 中小企業が抱える課題に向き合い、<br>

@@ -26,6 +26,18 @@ function create_staff_post_type() {
 }
 add_action('init', 'create_staff_post_type');
 
+function staff_archive_query($query) {
+  if (is_admin() || !$query->is_main_query()) {
+    return;
+  }
+  if ($query->is_post_type_archive('staff')) {
+    $query->set('posts_per_page', -1);
+    $query->set('orderby', 'menu_order');
+    $query->set('order', 'ASC');
+  }
+}
+add_action('pre_get_posts', 'staff_archive_query');
+
 function change_menu_label(){
   global $menu;
   global $submenu;

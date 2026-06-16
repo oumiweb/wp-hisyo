@@ -15,18 +15,8 @@
   <section class="staff">
     <div class="staff__inner">
       <div class="staff-content">
-        <?php
-        // 並び順を menu_order で制御する
-        $args = [
-          'post_type'      => 'staff',
-          'posts_per_page' => -1,
-          'orderby'        => 'menu_order',
-          'order'          => 'ASC'
-        ];
-        $staff_query = new WP_Query($args);
-        ?>
-        <?php if ($staff_query->have_posts()): ?>
-          <?php while ($staff_query->have_posts()): $staff_query->the_post(); ?>
+        <?php if (have_posts()): ?>
+          <?php while (have_posts()): the_post(); ?>
 
             <?php
             $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -50,7 +40,6 @@
               </div>
             </a>
           <?php endwhile; ?>
-          <?php wp_reset_postdata(); ?>
         <?php else: ?>
           <p>スタッフが登録されていません。</p>
         <?php endif; ?>
