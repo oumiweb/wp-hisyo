@@ -6,4 +6,9 @@
   padding-inline: clamp(1rem, -3.241rem + 18.05vw, 13rem);
   margin-right: auto;
   margin-left: auto;
+
+  &--wide {
+    max-width: 1926px;
+    padding-inline: clamp(1rem, -3.974rem + 21.22vw, 14.375rem);
+  }
 }

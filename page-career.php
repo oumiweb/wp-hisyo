@@ -5,11 +5,11 @@
   <?php while(have_posts()): the_post(); ?>
 
     <section class="carrer-mv">
-      <div class="section__mv">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/career/carrer-fv 1.jpg" alt="" class="section__image">
-        <div class="mv__wrapper">
-          <h1 class="mv__title">研修制度とキャリアパス</h1>
-          <p class="mv__lead">キャリアパスを支える充実した、研修制度</p>
+      <div class="page-mv">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/career/carrer-fv 1.jpg" alt="" class="page-mv__image">
+        <div class="page-mv__body">
+          <h1 class="page-mv__title">研修制度とキャリアパス</h1>
+          <p class="page-mv__lead">キャリアパスを支える充実した、研修制度</p>
         </div>
       </div>
       <ol class="breadcrumbs">

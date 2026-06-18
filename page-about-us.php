@@ -5,12 +5,12 @@
     <?php while (have_posts()): the_post(); ?>
 
       <section class="about-us">
-        <div class="section__mv">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/about-fv.jpg" alt="" class="section__image">
-          <div class="mv__wrapper">
-            <h1 class="mv__title"><?php the_title(); ?>
+        <div class="page-mv">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/about-fv.jpg" alt="" class="page-mv__image">
+          <div class="page-mv__body">
+            <h1 class="page-mv__title"><?php the_title(); ?>
             </h1>
-            <p class="mv__lead">私たちの理念を紹介します。</p>
+            <p class="page-mv__lead">私たちの理念を紹介します。</p>
           </div>
         </div>
         <ul class="breadcrumbs">
@@ -82,7 +82,7 @@
 
       <section class="message">
         <h2 class="message__title section-title">代表メッセージ</h2>
-        <div class="about-us__inner">
+        <div class="section-inner section-inner--wide">
           <div class="message__content">
             <div class="message__image">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/about-us/ceo.png" alt="代表の写真">
@@ -128,7 +128,7 @@
       </section>
 
       <section class="business">
-        <div class="about-us__inner">
+        <div class="section-inner section-inner--wide">
           <h2 class="business__title">業務内容</h2>
           <p class="business__lead">
           飛翔税理士事務所では、法人・個人のお客様の幅広いニーズにお応えするために、<br>

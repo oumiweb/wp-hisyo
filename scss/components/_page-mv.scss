@@ -1,0 +1,78 @@
+@use "../base" as *;
+
+.page-mv {
+  position: relative;
+  margin-top: 118px;
+
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.page-mv__image {
+  width: 100%;
+  aspect-ratio: calc(1440 / 339);
+
+  @include mq("md") {
+    height: 350px;
+    object-fit: cover;
+  }
+}
+
+.page-mv__body {
+  position: absolute;
+  top: clamp(35px, 5.2vw, 75px);
+  left: clamp(150px, 16.1vw, 232px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include mq("md") {
+    left: 20px;
+    top: 130px;
+  }
+}
+
+.page-mv__title {
+  font-size: clamp(2rem, 1.429rem + 2.86vw, 4rem);
+  font-weight: normal;
+
+  @include mq("lg") {
+    font-size: 36px;
+  }
+}
+
+.page-mv__title,
+.page-mv__subtitle,
+.page-mv__lead {
+  background-color: $white;
+  padding: 3px 10px;
+}
+
+.page-mv__subtitle,
+.page-mv__lead {
+  font-weight: $bold;
+  font-size: 24px;
+
+  @include mq("lg") {
+    font-size: 16px;
+  }
+}
+
+.page-mv__subtitle {
+  margin-top: 21px;
+
+  @include mq("lg") {
+    margin-top: 12px;
+  }
+}
+
+.page-mv__lead {
+  margin-top: 21px;
+  color: $hover-color;
+
+  @include mq("lg") {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+}

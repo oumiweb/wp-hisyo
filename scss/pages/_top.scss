@@ -458,7 +458,6 @@ body {
 
 .top-member {
   padding-top: 121px;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -517,8 +516,20 @@ body {
 .top-member__swiper {
   z-index: 0;
   width: 100%;
-}
+  overflow: hidden;
 
+  .swiper-wrapper {
+    padding-top: 52px;
+  }
+
+  .swiper-slide {
+    width: 334px;
+
+    &:nth-of-type(2n) {
+      padding-top: 36px;
+    }
+  }
+}
 .section-text {
   padding-top: 10px;
   line-height: 1.7;
@@ -527,10 +538,6 @@ body {
   @media screen and (min-width: 1800px) and (max-width: 2560px) {
     font-size: 1.5rem;
   }
-}
-
-.swiper-wrapper {
-  padding-top: 52px;
 }
 
 .staff-card__link {
@@ -547,11 +554,6 @@ body {
 .staff-card__link:hover .staff-cards {
   transform: translateY(-15px);
 }
-
-.swiper-wrapper .swiper-slide:nth-of-type(2n) {
-  padding-top: 36px;
-}
-
 
 .staff-card__message {
   position: absolute;
@@ -584,36 +586,49 @@ body {
 }
 
 
-/* スライドの動き等速 */
-.swiper-wrapper {
-  transition-timing-function: linear;
-}
-
 /* 画像のサイズ調整 */
 .staff-card__image {
   width: 300px;
   border-radius: 30px;
 }
 
-.swiper-slide {
-  width: 334px;
+.top-member__viewmore {
+  position: relative;
+  width: 100%;
+  min-height: 5rem;
+  margin-top: 76px;
 }
 
-
-.top-member__viewmore {
-  margin-top: 76px;
-  margin-left: 300px;
-  position: relative;
-
-  @media screen and (max-width: 1300px) {
-    margin-left: 150px;
-  }
+.top-member__viewmore .viewmore-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 .top-member__arrow-btn {
+  display: none;
   position: absolute;
-  top: 10px;
-  right: 227px;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 20px);
+
+  @media screen and (min-width: 1025px) {
+    display: flex;
+  }
+
+  .button-prev {
+    margin-left: 0;
+  }
+}
+
+.button-next,
+.button-prev {
+  cursor: pointer;
+  padding: 0;
 }
 
 .button-next {
@@ -671,18 +686,6 @@ body {
 }
 
 // メディアクエリー
-@include mq("lg") {
-  .top-member__arrow-btn {
-    display: none;
-  }
-
-  .top-member__viewmore {
-    justify-content: flex-start;
-    margin-left: 127px;
-  }
-}
-
-
 @include mq("md") {
   .top-member {
     padding-top: 71px;
@@ -704,27 +707,26 @@ body {
     left: -15%;
   }
 
+  .top-member__swiper {
+    margin-top: 50px;
+    margin-left: 10px;
+
+    .swiper-wrapper {
+      padding-top: 0;
+    }
+
+    .swiper-slide {
+      width: 246px;
+      margin-right: 23px;
+    }
+  }
+
   .staff-card__image {
     width: 246px;
   }
 
-  .swiper-slide {
-    width: 246px;
-  }
-
-  .top-member__swiper {
-    margin-top: 50px;
-    margin-left: 10px;
-  }
-
-  .swiper-slide {
-    margin-right: 23px;
-  }
-
   .top-member__viewmore {
-    justify-content: center;
-    margin: 52px 33px 0 33px;
-    text-align: center;
+    margin-top: 52px;
   }
 
   .staff-card__message {
@@ -952,11 +954,6 @@ body {
     width: 251px;
     height: 251px;
     margin-inline: 48px;
-  }
-
-
-  .swiper-wrapper {
-    padding: 0;
   }
 
   .top-benefits__list {

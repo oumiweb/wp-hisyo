@@ -5,12 +5,12 @@
   <?php while(have_posts()): the_post(); ?>
 
     <section class="benefit-mv">
-      <div class="section__mv">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/benefits/benefits-fv.jpg" alt="" class="section__image">
-        <div class="mv__wrapper">
-          <h1 class="mv__title"><?php the_title(); ?>
+      <div class="page-mv">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/benefits/benefits-fv.jpg" alt="" class="page-mv__image">
+        <div class="page-mv__body">
+          <h1 class="page-mv__title"><?php the_title(); ?>
           </h1>
-          <p class="mv__lead">充実した福利厚生制度を設けています。</p>
+          <p class="page-mv__lead">充実した福利厚生制度を設けています。</p>
         </div>
       </div>
       <ol class="breadcrumbs">

@@ -8,8 +8,8 @@
       slidesPerGroup: 1,
       speed: 800,
       navigation: {
-        nextEl: ".button-next",
-        prevEl: ".button-prev",
+        nextEl: ".top-member__arrow-btn .button-next",
+        prevEl: ".top-member__arrow-btn .button-prev",
       },
     });
 
@@ -31,8 +31,20 @@
     $(window).on('scroll', showFixedHeader);
 
     // ▼ ハンバーガーメニュー
+    let savedScrollY = 0;
+
     $('.js-hamburger').click(toggleHamburgerMenu);
     $('#js-global-menu a').click(toggleHamburgerMenu);
+
+    function lockBodyScroll() {
+      savedScrollY = $(window).scrollTop();
+      $('body').addClass('is-drawerActive').css('top', `-${savedScrollY}px`);
+    }
+
+    function unlockBodyScroll() {
+      $('body').removeClass('is-drawerActive').css('top', '');
+      $(window).scrollTop(savedScrollY);
+    }
 
     function toggleHamburgerMenu() {
       const isExpanded = $('.js-hamburger').attr('aria-expanded') === 'true';
@@ -41,21 +53,21 @@
       const $headerBlack = $('.header--black');
       const $headerWhite = $('.header--white');
 
-      $('body').toggleClass('is-drawerActive');
-
       if (!isExpanded) {
+        lockBodyScroll();
         $('.js-hamburger').attr('aria-expanded', true);
         $globalMenu.addClass('is-visible').attr('aria-hidden', 'false');
         $headerBlack.removeClass('is_active').addClass('is-hidden');
         $headerSp.addClass('is-visible');
       } else {
+        unlockBodyScroll();
         $('.js-hamburger').attr('aria-expanded', false);
         $globalMenu.removeClass('is-visible').attr('aria-hidden', 'true');
         $headerSp.removeClass('is-visible');
         $headerBlack.removeClass('is-hidden');
 
         if ($('body').hasClass('top-page')) {
-          const isTop = $('.fv').length && $(window).scrollTop() < $('.fv').outerHeight();
+          const isTop = $('.fv').length && savedScrollY < $('.fv').outerHeight();
           if (isTop) {
             $headerWhite.addClass('is-visible');
           } else {
@@ -128,12 +140,6 @@
         const inView = scrollTop > offsetTop - windowHeight + 100 && scrollTop < offsetTop + $(this).outerHeight();
         $(this).toggleClass('is-visible', inView);
       });
-    });
-
-    // ▼ アコーディオン
-    $('.jsAccordionQuestion').on('click', function () {
-      $(this).next().toggleClass('is-open');
-      $(this).toggleClass('is-active');
     });
 
     // ▼ フォームバリデーション

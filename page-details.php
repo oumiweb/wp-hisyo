@@ -4,12 +4,12 @@
   <?php if(have_posts()): ?>
   <?php while(have_posts()): the_post(); ?>
     <section class="details-mv">
-      <div class="section__mv">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/details/details-fv 1.jpg" alt="オフィス風景" class="section__image">
-        <div class="mv__wrapper">
-          <h1 class="mv__title"><?php the_title(); ?></h1>
-          <p class="mv__sub-title">募集要項</p>
-          <p class="mv__lead">飛翔は幅広く仲間を募集しています。</p>
+      <div class="page-mv">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/details/details-fv 1.jpg" alt="オフィス風景" class="page-mv__image">
+        <div class="page-mv__body">
+          <h1 class="page-mv__title"><?php the_title(); ?></h1>
+          <p class="page-mv__subtitle">募集要項</p>
+          <p class="page-mv__lead">飛翔は幅広く仲間を募集しています。</p>
         </div>
       </div>
       <ol class="breadcrumbs">

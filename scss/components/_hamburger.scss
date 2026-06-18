@@ -24,6 +24,14 @@
           transition: all .3s ease-in-out;
 }
 
+body.is-drawerActive {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 body.is-drawerActive .hamburger {
   position: fixed;
 }
@@ -121,8 +129,11 @@ body.is-drawerActive .hamburger {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 100;
   overflow-y: auto;
+  overscroll-behavior: contain;
   height: 100vh;
+  height: 100dvh;
   background-color: $background-color;
   color: $black;
   visibility: hidden;

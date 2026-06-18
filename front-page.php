@@ -108,20 +108,27 @@
               <?php if ($staff_query->have_posts()) : ?>
                 <?php while ($staff_query->have_posts()) : $staff_query->the_post(); ?>
                   <?php
-                  $staff_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); // アイキャッチ画像
-                  $staff_name = get_field('staff_name'); // ACFフィールド：名前
-                  $staff_position = get_field('staff_position'); // ACFフィールド：役職
-                  $staff_year = get_field('staff_year'); // ACFフィールド：入社年
-                  $staff_msg1 = get_field('staff_message_1'); // ACFフィールド：メッセージ1
-                  $staff_msg2 = get_field('staff_message_2'); // ACFフィールド：メッセージ2
+                  $post_id = get_the_ID();
+                  $staff_image = get_the_post_thumbnail_url($post_id, 'full');
+                  $staff_name = theme_get_field('staff_name', $post_id);
+                  $staff_position = theme_get_field('staff_position', $post_id);
+                  $staff_year = theme_get_field('staff_year', $post_id);
+                  $staff_msg1 = theme_get_field('staff_message_1', $post_id);
+                  $staff_msg2 = theme_get_field('staff_message_2', $post_id);
                   ?>
                   <div class="swiper-slide">
                     <a href="<?php the_permalink(); ?>" class="staff-card__link">
                       <div class="staff-cards">
+                        <?php if ( $staff_image ) : ?>
                         <img src="<?php echo esc_url($staff_image); ?>" alt="<?php echo esc_attr($staff_name); ?>の写真" class="staff-card__image">
+                        <?php endif; ?>
                         <div class="staff-card__message">
-                          <span><?php echo esc_html($staff_msg1); ?></span>
-                          <span><?php echo esc_html($staff_msg2); ?></span>
+                          <?php if ( $staff_msg1 !== '' ) : ?>
+                            <span><?php echo esc_html($staff_msg1); ?></span>
+                          <?php endif; ?>
+                          <?php if ( $staff_msg2 !== '' ) : ?>
+                            <span><?php echo esc_html($staff_msg2); ?></span>
+                          <?php endif; ?>
                         </div>
                         <div class="staff-card__info">
                           <p class="staff-card__position"><?php echo esc_html($staff_position); ?>&nbsp;&nbsp;<?php echo esc_html($staff_year); ?></p>
@@ -137,13 +144,13 @@
               <?php endif; ?>
             </div>
             </div>
-            <div class="top-member__viewmore">
+        </div>
+        <div class="top-member__viewmore">
           <a class="viewmore-btn" href="<?php echo esc_url( get_post_type_archive_link('staff') ); ?>">VIEW MORE</a>
           <div class="top-member__arrow-btn">
-            <a class="button-prev" href=""><span class="visually-hidden">前へ</span></a>
-            <a class="button-next" href=""><span class="visually-hidden">次へ</span></a>
+            <button type="button" class="button-prev"><span class="visually-hidden">前へ</span></button>
+            <button type="button" class="button-next"><span class="visually-hidden">次へ</span></button>
           </div>
-        </div>
         </div>
       </section>
 

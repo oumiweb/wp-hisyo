@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <main>
-  <div class="section__mv">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/staff-fv 1.jpg" alt="" class="section__image">
-    <div class="mv__wrapper">
-      <h1 class="mv__title">社員について</h1>
-      <p class="mv__lead">弊社社員のリアルな声を紹介しています。</p>
+  <div class="page-mv">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/staff-fv 1.jpg" alt="" class="page-mv__image">
+    <div class="page-mv__body">
+      <h1 class="page-mv__title">社員について</h1>
+      <p class="page-mv__lead">弊社社員のリアルな声を紹介しています。</p>
     </div>
   </div>
   <ol class="breadcrumbs">

@@ -6,7 +6,7 @@
 
       <section class="staff-detail">
         <div class="section-inner">
-          <div class="staff-detail__mv section__mv">
+          <div class="staff-detail__mv">
             <!-- 左側：テキスト -->
             <div class="staff-detail__message">
               <div class="staff-detail__lead">

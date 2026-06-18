@@ -4,6 +4,11 @@
 .staff-detail {
   background-color: $background-color;
   padding: 77px 0 81px 0;
+  margin-top: 118px;
+
+  @include mq("md") {
+    margin-top: 0;
+  }
 }
 
 .staff-detail__mv {

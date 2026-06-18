@@ -26,6 +26,24 @@ function create_staff_post_type() {
 }
 add_action('init', 'create_staff_post_type');
 
+/**
+ * ACF フィールド取得（カスタムクエリ内でも安全に使う）
+ */
+function theme_get_field( $key, $post_id = null ) {
+  if ( ! function_exists( 'get_field' ) ) {
+    return '';
+  }
+
+  $post_id = $post_id ?: get_the_ID();
+  $value = get_field( $key, $post_id );
+
+  if ( is_string( $value ) || is_numeric( $value ) ) {
+    return (string) $value;
+  }
+
+  return '';
+}
+
 function staff_archive_query($query) {
   if (is_admin() || !$query->is_main_query()) {
     return;

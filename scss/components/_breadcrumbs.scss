@@ -1,0 +1,26 @@
+@use "../base" as *;
+
+.breadcrumbs {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  background-color: #F0F0F0;
+  padding-left: clamp(1rem, -4rem + 20vw, 20rem);
+  line-height: 1.7;
+
+  @include mq(md) {
+    flex-wrap: wrap;
+  }
+
+  li a {
+    font-size: 14px;
+    color: $black;
+  }
+}
+
+.breadcrumbs li + li::before {
+  content: "＞";
+  color: $black;
+  padding-left: 4px;
+  font-size: 14px;
+}
