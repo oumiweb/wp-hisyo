@@ -144,15 +144,17 @@
 
     // ▼ フォームバリデーション
     const $submitBtn = $('#js-submit');
-    $('#form input, #form textarea, #form select').on('change keyup', function () {
+    const $entryForm = $('.wpcf7-form');
+
+    $entryForm.on('change keyup', 'input, textarea, select', function () {
       const isValid =
         $('#name').val().trim() !== '' &&
         $('#name_kana').val().trim() !== '' &&
-        $('#mail').val().trim() !== '' &&
-        $('#tel').val().trim() !== '' &&
+        $('input[name="email"]').val().trim() !== '' &&
+        $('input[name="tel"]').val().trim() !== '' &&
         $('input[name="radio-xxx"]:checked').length > 0 &&
         $('textarea[name="textarea-xxx"]').val().trim() !== '' &&
-        $('input[name="checkbox-xxx"]:checked').length > 0 &&
+        $('input[name="checkbox-xxx[]"]:checked').length > 0 &&
         $('#birth_year').val().trim() !== '' &&
         $('#month').val() !== '' &&
         $('#birth_day').val() !== '' &&

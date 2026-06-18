@@ -44,6 +44,44 @@ function theme_get_field( $key, $post_id = null ) {
   return '';
 }
 
+/**
+ * エントリーフォーム：生年月日の月・日 select をキーボード操作しやすくする
+ */
+function theme_fix_entry_birth_selects( $content ) {
+  if ( strpos( $content, 'data-name="month"' ) === false ) {
+    return $content;
+  }
+
+  $content = preg_replace(
+    '/<select([^>]*?)name="month"/',
+    '<select$1id="month" name="month"',
+    $content,
+    1
+  );
+  $content = preg_replace(
+    '/<select([^>]*?)name="birth_day"/',
+    '<select$1id="birth_day" name="birth_day"',
+    $content,
+    1
+  );
+
+  $content = str_replace( '<p class="birth__label">', '<div class="birth__field">', $content );
+
+  $content = preg_replace(
+    '#(<div class="birth__field">\s*<span class="wpcf7-form-control-wrap" data-name="month">.*?</span>)</p>#s',
+    '$1</div>',
+    $content
+  );
+  $content = preg_replace(
+    '#(<div class="birth__field">\s*<span class="wpcf7-form-control-wrap" data-name="birth_day">.*?</span>)</p>#s',
+    '$1</div>',
+    $content
+  );
+
+  return $content;
+}
+add_filter( 'wpcf7_form_elements', 'theme_fix_entry_birth_selects' );
+
 function staff_archive_query($query) {
   if (is_admin() || !$query->is_main_query()) {
     return;

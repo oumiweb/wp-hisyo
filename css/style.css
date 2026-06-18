@@ -3290,11 +3290,41 @@ body.is-drawerActive .hamburger {
     margin-left: 0;
   }
 }
+.form__birth-selects .birth__field,
 .form__birth-selects .birth__label {
   font-size: 12px;
   width: 178px;
   position: relative;
 }
+.form__birth-selects .birth__field select,
+.form__birth-selects .birth__field .wpcf7-select,
+.form__birth-selects .birth__label select,
+.form__birth-selects .birth__label .wpcf7-select {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 22px 52px 22px 20px;
+  border: 1px solid #AFA86F;
+  background-color: #FAF7F1;
+  border-radius: 10px;
+  outline: none;
+  appearance: none;
+  font-size: 12px;
+  color: #222222;
+  cursor: pointer;
+}
+.form__birth-selects .birth__field select:focus, .form__birth-selects .birth__field select:focus-visible,
+.form__birth-selects .birth__field .wpcf7-select:focus,
+.form__birth-selects .birth__field .wpcf7-select:focus-visible,
+.form__birth-selects .birth__label select:focus,
+.form__birth-selects .birth__label select:focus-visible,
+.form__birth-selects .birth__label .wpcf7-select:focus,
+.form__birth-selects .birth__label .wpcf7-select:focus-visible {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+  border-color: #AFA86F;
+}
+.form__birth-selects .birth__field::after,
 .form__birth-selects .birth__label::after {
   content: "";
   position: absolute;
@@ -3306,14 +3336,16 @@ body.is-drawerActive .hamburger {
   border-right: 1px solid #222222;
   transform: rotate(135deg);
   pointer-events: none;
+  z-index: 2;
 }
 @media screen and (max-width: 767px) {
+  .form__birth-selects .birth__field::after,
   .form__birth-selects .birth__label::after {
     top: 50%;
     right: 15%;
   }
 }
-.form__birth-selects .wpcf7-validates-as-required {
+.form__birth-selects .wpcf7-validates-as-required:not(select) {
   padding: 22px;
 }
 
@@ -3332,8 +3364,9 @@ body.is-drawerActive .hamburger {
 }
 
 .select-box:focus {
-  border-color: #222222;
-  /* Border color when focused */
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+  border-color: #AFA86F;
 }
 
 .radio-btn {

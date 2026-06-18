@@ -207,10 +207,34 @@
     }
   }
 
+  .birth__field,
   .birth__label {
     font-size: 12px;
     width: 178px;
     position: relative;
+
+    select,
+    .wpcf7-select {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 22px 52px 22px 20px;
+      border: 1px solid #AFA86F;
+      background-color: #FAF7F1;
+      border-radius: 10px;
+      outline: none;
+      appearance: none;
+      font-size: 12px;
+      color: $black;
+      cursor: pointer;
+
+      &:focus,
+      &:focus-visible {
+        outline: 2px solid #005fcc;
+        outline-offset: 2px;
+        border-color: #AFA86F;
+      }
+    }
 
     &::after {
       content: "";
@@ -222,7 +246,8 @@
       border-top: 1px solid $black;
       border-right: 1px solid $black;
       transform: rotate(135deg);
-      pointer-events: none; // ←クリックの邪魔をしない
+      pointer-events: none;
+      z-index: 2;
 
       @include mq("md") {
         top: 50%;
@@ -232,7 +257,9 @@
   }
 
   .wpcf7-validates-as-required {
-    padding: 22px;
+    &:not(select) {
+      padding: 22px;
+    }
   }
 }
 
@@ -254,8 +281,9 @@
 
 
 .select-box:focus {
-  border-color: $black;
-  /* Border color when focused */
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+  border-color: #AFA86F;
 }
 
 .radio-btn {
